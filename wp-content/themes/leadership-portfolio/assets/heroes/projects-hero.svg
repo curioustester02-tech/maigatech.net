@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" role="img" aria-label="Stylized enterprise data center">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06162c"/><stop offset=".55" stop-color="#0a2e57"/><stop offset="1" stop-color="#0c4f83"/></linearGradient><linearGradient id="rack" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#17263a"/><stop offset="1" stop-color="#07111f"/></linearGradient></defs>
+  <rect width="1600" height="560" fill="url(#bg)"/>
+  <g transform="translate(860 70)">
+    <g fill="url(#rack)" stroke="#5ba9ff" stroke-opacity=".38" stroke-width="2"><rect x="0" y="20" width="165" height="420" rx="8"/><rect x="190" y="0" width="165" height="440" rx="8"/><rect x="380" y="35" width="165" height="405" rx="8"/><rect x="570" y="8" width="165" height="432" rx="8"/></g>
+    <g fill="#6fb5ff" fill-opacity=".8">
+      <circle cx="130" cy="65" r="5"/><circle cx="320" cy="45" r="5"/><circle cx="510" cy="80" r="5"/><circle cx="700" cy="53" r="5"/>
+    </g>
+    <g stroke="#7bbaff" stroke-opacity=".35" stroke-width="2">
+      <path d="M20 110h125M20 150h125M20 190h125M20 230h125M20 270h125M20 310h125M20 350h125"/>
+      <path d="M210 95h125M210 135h125M210 175h125M210 215h125M210 255h125M210 295h125M210 335h125"/>
+      <path d="M400 120h125M400 160h125M400 200h125M400 240h125M400 280h125M400 320h125M400 360h125"/>
+      <path d="M590 100h125M590 140h125M590 180h125M590 220h125M590 260h125M590 300h125M590 340h125"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#50b9ff" stroke-width="2" stroke-opacity=".48"><path d="M1040 40C930 165 995 345 840 500"/><path d="M1370 15c-90 130-10 240-105 390"/></g>
+  <path d="M0 0h800v560H0z" fill="#071a33" fill-opacity=".42"/>
+</svg>

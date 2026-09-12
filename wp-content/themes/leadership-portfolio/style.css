@@ -1,7 +1,7 @@
 /*
 Theme Name: Leadership Portfolio
 Description: Dynamic professional portfolio with privacy-aware project disclosure.
-Version: 5.0.0
+Version: 6.0.0
 */
 :root{--navy:#071a33;--blue:#1268d6;--ink:#12233d;--muted:#65758a;--line:#dce5ef;--soft:#f5f8fc;--white:#fff;--shadow:0 16px 44px rgba(9,31,60,.10);--max:1180px;--green:#177a62;--gold:#9a6a14;--purple:#7258aa}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{text-decoration:none;color:inherit}img{max-width:100%}.wrap{width:min(var(--max),calc(100% - 38px));margin:auto}
@@ -316,4 +316,186 @@ h3,
     h2 {
         font-size: clamp(1.75rem, 7.5vw, 2rem);
     }
+}
+
+/* =========================================================
+   MaigaTech B+D Visual Refresh v6.0
+   Modern hero imagery + executive resume enhancements
+   Content wording intentionally unchanged.
+   ========================================================= */
+
+/* Home: keep current wording/headshot while adding a richer B-style backdrop. */
+body.home .hero {
+    background-color: #06162c;
+    background-image:
+        linear-gradient(90deg, rgba(6,22,44,.97) 0%, rgba(6,22,44,.88) 46%, rgba(6,22,44,.45) 72%, rgba(6,22,44,.2) 100%),
+        url('assets/heroes/home-hero.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Every standard internal page receives a visual hero by default. */
+.page-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 76px 0 60px;
+    color: #fff;
+    background-color: #071a33;
+    background-image:
+        linear-gradient(90deg, rgba(7,26,51,.98) 0%, rgba(7,26,51,.90) 48%, rgba(7,26,51,.50) 72%, rgba(7,26,51,.26) 100%),
+        url('assets/heroes/home-hero.svg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 0;
+}
+
+.page-hero .wrap { position: relative; z-index: 2; }
+.page-hero h1 {
+    color: #fff;
+    text-shadow: 0 3px 18px rgba(0,0,0,.22);
+}
+.page-hero .lead { color: #d9e8f7; }
+.page-hero .eyebrow { color: #72b6ff; }
+.page-hero .privacy-strip span {
+    background: rgba(255,255,255,.09);
+    border-color: rgba(255,255,255,.20);
+    color: #e1edf8;
+    backdrop-filter: blur(8px);
+}
+.page-hero .privacy-strip strong { color: #fff; }
+
+/* Page-specific hero art. */
+body.post-type-archive-experience .page-hero {
+    background-image:
+        linear-gradient(90deg, rgba(7,26,51,.98) 0%, rgba(7,26,51,.90) 45%, rgba(7,26,51,.50) 72%, rgba(7,26,51,.20) 100%),
+        url('assets/heroes/experience-hero.svg');
+}
+
+body.post-type-archive-project .page-hero {
+    background-image:
+        linear-gradient(90deg, rgba(7,26,51,.98) 0%, rgba(7,26,51,.90) 46%, rgba(7,26,51,.48) 73%, rgba(7,26,51,.18) 100%),
+        url('assets/heroes/projects-hero.svg');
+}
+
+body.page-id-7 .page-hero {
+    background-image:
+        linear-gradient(90deg, rgba(7,26,51,.98) 0%, rgba(7,26,51,.90) 46%, rgba(7,26,51,.48) 73%, rgba(7,26,51,.18) 100%),
+        url('assets/heroes/resume-hero.svg');
+}
+
+body.page-id-8 .page-hero {
+    background-image:
+        linear-gradient(90deg, rgba(7,26,51,.98) 0%, rgba(7,26,51,.90) 46%, rgba(7,26,51,.48) 73%, rgba(7,26,51,.18) 100%),
+        url('assets/heroes/contact-hero.svg');
+}
+
+/* Project detail pages: keep existing case-study wording but add project visual language. */
+.case-hero {
+    background-color: #06162c;
+    background-image:
+        linear-gradient(90deg, rgba(6,22,44,.98) 0%, rgba(6,22,44,.88) 52%, rgba(6,22,44,.45) 78%, rgba(6,22,44,.18) 100%),
+        url('assets/heroes/projects-hero.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* D-style resume remains intact; this adds a compact QR download module. */
+.resume-download-card {
+    margin: 24px 0 26px;
+    padding: 18px;
+    border-radius: 16px;
+    text-align: center;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.16);
+}
+.resume-download-card h3 {
+    margin: 0 0 7px;
+    color: #fff !important;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1rem;
+}
+.resume-download-card p {
+    margin: 0 0 12px;
+    color: #dbe8f5;
+    font-size: .79rem;
+    line-height: 1.45;
+}
+.resume-download-card .resume-qr-link {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(0,0,0,.18);
+}
+.resume-download-card .resume-qr {
+    display: block;
+    width: 132px;
+    height: 132px;
+    object-fit: contain;
+}
+.resume-download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 9px;
+    background: #1472e6;
+    color: #fff !important;
+    font-size: .82rem;
+    font-weight: 850;
+    transition: transform .16s ease, background .16s ease;
+}
+.resume-download-button:hover {
+    background: #2a82ec;
+    transform: translateY(-1px);
+}
+.resume-download-note {
+    display: block;
+    margin-top: 8px;
+    color: #b9cce0;
+    font-size: .68rem;
+}
+
+/* Give the sparse Contact page a balanced D-style card without changing its copy. */
+body.page-id-8 .section > .wrap {
+    max-width: 860px;
+    padding: 34px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+body.page-id-8 .section > .wrap h2 { margin-bottom: 16px; }
+body.page-id-8 .section > .wrap p { line-height: 1.85; }
+body.page-id-8 .section > .wrap a { color: var(--blue); font-weight: 750; }
+
+@media (max-width: 900px) {
+    .page-hero { padding: 62px 0 50px; background-position: 60% center; }
+    body.post-type-archive-experience .page-hero,
+    body.post-type-archive-project .page-hero,
+    body.page-id-7 .page-hero,
+    body.page-id-8 .page-hero { background-position: 62% center; }
+}
+
+@media (max-width: 650px) {
+    .page-hero { padding: 52px 0 42px; }
+    .page-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(5,18,37,.18);
+        z-index: 1;
+        pointer-events: none;
+    }
+    .resume-download-card .resume-qr { width: 118px; height: 118px; }
+    body.page-id-8 .section > .wrap { padding: 24px; }
+}
+
+@media print {
+    .resume-download-card { display: none !important; }
 }
