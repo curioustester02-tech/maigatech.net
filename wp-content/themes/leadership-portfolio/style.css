@@ -1,7 +1,7 @@
 /*
 Theme Name: Leadership Portfolio
 Description: Dynamic professional portfolio with privacy-aware project disclosure.
-Version: 6.0.1
+Version: 6.0.2
 */
 :root{--navy:#071a33;--blue:#1268d6;--ink:#12233d;--muted:#65758a;--line:#dce5ef;--soft:#f5f8fc;--white:#fff;--shadow:0 16px 44px rgba(9,31,60,.10);--max:1180px;--green:#177a62;--gold:#9a6a14;--purple:#7258aa}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{text-decoration:none;color:inherit}img{max-width:100%}.wrap{width:min(var(--max),calc(100% - 38px));margin:auto}
@@ -792,4 +792,11 @@ body.page-id-8 .section > .wrap a { color: var(--blue); font-weight: 750; }
     font-family: inherit !important;
     font-size: 16px !important;
     line-height: 1.55 !important;
+}
+
+/* Network Lab PASS badge v1 */
+.case-content .network-lab-case .network-status-badge.network-status-pass {
+    background: #e8f7ef !important;
+    color: #126b49 !important;
+    border: 1px solid #b8e3cc !important;
 }

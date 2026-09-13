@@ -52,7 +52,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<link rel='stylesheet' id='lp-style-css' href='/wp-content/themes/leadership-portfolio/style.css?ver=6.0.1' media='all' />
+<link rel='stylesheet' id='lp-style-css' href='/wp-content/themes/leadership-portfolio/style.css?ver=6.0.2' media='all' />
 <link rel="canonical" href="/projects/secure-hybrid-enterprise-iot-endpoint-management-lab/" />
 <link rel='shortlink' href='/?p=57' />
 </head>
@@ -90,14 +90,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     </div>
 </header>
 <main>
-<section class="case-hero"><div class="wrap"><div class="project-kicker">NETWORK ARCHITECTURE / CYBERSECURITY / IOT</div><h1>Secure Hybrid Enterprise, IoT &#038; Endpoint Management Lab</h1><p class="case-lead">Hands-on modernization of a mixed small-business network using Fortinet security, VLAN segmentation, management-plane hardening, privileged-access controls, least-privilege firewall policy, and controlled IoT isolation.</p><div class="case-meta"><span>Active Hands-On Portfolio</span><span>Solution Architecture / IT Operations</span><span>Public case study</span></div></div></section>
+<section class="case-hero"><div class="wrap"><div class="project-kicker">NETWORK ARCHITECTURE / CYBERSECURITY / IOT</div><h1>Secure Hybrid Enterprise, IoT &#038; Endpoint Management Lab</h1><p class="case-lead">Hands-on modernization of a mixed small-business network using enterprise firewalling, VLAN segmentation, management-plane hardening, privileged-access controls, least-privilege policy, and validated IoT/LoRaWAN service continuity.</p><div class="case-meta"><span>Active Hands-On Portfolio</span><span>Solution Architecture / IT Operations</span><span>Public case study</span></div></div></section>
 <section class="section"><div class="wrap case-layout"><article class="case-content"><div class="network-lab-case">
 <h2>Overview</h2>
 <p>This project documents the assessment, redesign, implementation, and validation of a real hands-on network environment using enterprise-style change control. The starting environment combined user endpoints, infrastructure, storage, printing, wireless access, and IoT systems on a broadly shared network. The objective is to preserve service availability while introducing segmentation, safer administration, explicit policy boundaries, better logging, and repeatable operational documentation.</p>
 <h2>Architecture Objective</h2>
-<p>The target model separates management, servers, storage, corporate users, IoT, printers, guest access, and lab/testing systems. Each segment is intended to receive only the connectivity required for its business function, with inter-zone traffic governed by explicit firewall policy rather than broad trust.</p>
+<p>The target model separates management, servers, storage, corporate users, IoT, printers, guest access, and lab/testing systems. Each segment receives only the connectivity required for its business function, with inter-zone traffic governed by explicit firewall policy rather than broad trust.</p>
 <figure>
-  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/network-lab-architecture.svg" alt="Sanitized target-state network architecture diagram"><figcaption>Sanitized public architecture. Real internal addresses, hostnames, MAC addresses, serial numbers, credentials, SSIDs, tokens, and device-specific identifiers are intentionally withheld.</figcaption></figure>
+  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/network-lab-architecture.svg" alt="Sanitized target-state network architecture diagram"><figcaption>Sanitized public architecture. Production identifiers, addressing, account data, radio identifiers, and device-specific implementation details are intentionally withheld.</figcaption></figure>
 <h2>Security &amp; Operations Remediation</h2>
 <h3>CHG-001 &mdash; DHCP Gateway Remediation</h3>
 <p>Corrected a stale DHCP gateway configuration and established deterministic routing on the management workstation while preserving Internet access and administrative reachability.</p>
@@ -110,18 +110,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h3>CHG-007 &mdash; DNS Path Correction</h3>
 <p>Removed an unintended ISP-provided DNS override, renewed the client lease, and validated successful name resolution against the intentionally configured system resolvers.</p>
 <h3>CHG-008 &mdash; Management-Plane Separation</h3>
-<p>Removed web administration from the ordinary user network while preserving management access through the dedicated administrative path. Validation confirmed the user network could no longer reach the firewall management interface over HTTPS.</p>
-<h3 class="network-change-heading">CHG-009 &mdash; IoT Segmentation <span class="network-status-badge">IN PROGRESS</span></h3>
-<div class="network-lab-lower">
-<p>The first production-style segmentation exercise moves a wired IoT/LoRaWAN gateway out of the shared user network into a dedicated IoT VLAN. This was selected as the first migration because it is a single-device, reversible change that tests the complete segmentation workflow before storage, printing, server, and management migrations.</p>
-<div class="network-policy">IoT segment<br />
-  &rarr; Internet: explicitly allowed with NAT and session logging<br />
-  &rarr; Required application service: explicitly scoped<br />
-  &rarr; User network: denied by default except approved service path<br />
-  &rarr; Management network: denied<br />
-  &rarr; Storage / printers: denied by default</div>
-<p><strong>Validated so far:</strong> dedicated IoT VLAN creation, DHCP scope, interface restrictions, Internet firewall policy, migration of the real IoT gateway to the new network, assignment of a new DHCP lease, and successful outbound Internet traffic.</p>
-<p><strong>Current validation:</strong> the application/MQTT service path is being verified before the change is closed. The project intentionally remains marked &ldquo;in progress&rdquo; until service-layer evidence confirms the full workflow.</p>
+<p>Removed web administration from the ordinary user network while preserving management access through the dedicated administrative path. Validation confirmed that the user network could no longer reach the firewall management interface over HTTPS.</p>
+<h3 class="network-change-heading">CHG-009 &mdash; IoT Segmentation &amp; End-to-End Service Validation <span class="network-status-badge network-status-pass">PASS</span></h3>
+<p>A wired LoRaWAN/IoT gateway was migrated out of the shared user network and into a dedicated IoT segment. The migration was deliberately performed as a reversible, single-device change to validate the full segmentation workflow before moving storage, printing, servers, and additional infrastructure.</p>
+<div class="network-policy">Dedicated IoT segment<br />
+  &rarr; Internet: explicitly allowed with NAT and logging<br />
+  &rarr; MQTT broker: explicitly allowed on the required service only<br />
+  &rarr; User network: denied by default<br />
+  &rarr; Management: narrow host/service exception only<br />
+  &rarr; Storage / printers / unrelated zones: denied by default</div>
+<p><strong>Validated end to end:</strong> VLAN and DHCP migration, outbound connectivity, restricted management access, local LoRaWAN network-server administration, real endpoint join and application uplinks, explicit MQTT firewall policy, raw broker publish/subscribe, and application-level ingestion/decoding of live telemetry.</p>
+<figure>
+  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/iot-segmentation-validation.svg" alt="Sanitized IoT segmentation and telemetry validation path"><figcaption>Public-safe validation path. Unique device identifiers, addresses, account IDs, and confidential implementation details are omitted.</figcaption></figure>
+<h2>Troubleshooting &amp; Fault Isolation</h2>
+<p>The change required separating network-layer symptoms from application-layer behavior. Connectivity tests established that the IoT gateway was reachable on its new segment, management services were blocked until explicitly authorized, the MQTT broker was listening and reachable, and raw publish/subscribe was functional. A long-running application bridge was then isolated as a separate processing issue; restarting only that bridge restored normal live telemetry ingestion. The suspected connection-lifecycle issue remains documented for later engineering rather than being misattributed to the network.</p>
 <h2>Change-Control Method</h2>
 <ul>
 <li>Capture current state before every meaningful change.</li>
@@ -146,16 +148,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Architecture Decisions &amp; Trade-offs</h2>
 <ul>
 <li><strong>Preserve the existing user network during migration:</strong> reduces service disruption while new zones are introduced incrementally.</li>
-<li><strong>Do not combine unrelated changes:</strong> ISP-edge redesign was intentionally deferred while internal security remediation was underway.</li>
-<li><strong>Migrate IoT first:</strong> a single wired gateway provides a controlled test case for VLAN, DHCP, NAT, policy and rollback.</li>
+<li><strong>Do not combine unrelated changes:</strong> ISP-edge redesign remains deferred while internal security remediation continues.</li>
+<li><strong>Migrate IoT first:</strong> a single wired gateway provided a controlled test case for VLAN, DHCP, NAT, policy, troubleshooting and rollback.</li>
 <li><strong>Scope application access explicitly:</strong> IoT systems receive access to required services instead of general access to the user network.</li>
+<li><strong>Validate at multiple layers:</strong> firewall counters alone are not treated as proof of application success; transport, broker, network-server and application ingestion were each tested independently.</li>
 <li><strong>Document licensing reality:</strong> expired subscription-backed security services are not represented as active protection.</li>
 </ul>
 <h2>Public Disclosure</h2>
-<p>This case study intentionally sanitizes infrastructure evidence. Exact addressing, hostnames, MAC addresses, serial numbers, account names, credentials, SSIDs, security tokens, device identifiers, and screenshots containing sensitive administrative data are withheld or redacted. IoT devices are described generically so this case study does not disclose confidential product identity or implementation details.</p>
+<p>This case study intentionally sanitizes infrastructure evidence. Exact addressing, hostnames, MAC addresses, serial numbers, account names, credentials, SSIDs, security tokens, radio identifiers, tenant/application IDs, and screenshots containing sensitive administrative data are withheld or redacted. IoT devices are described generically so the case study does not disclose confidential product identity or implementation details.</p>
 <h2>Next Milestones</h2>
-<p>Complete CHG-009 application-path validation, then continue with storage segmentation, printer isolation, management VLAN implementation, server-network design, secondary-switch integration, lab segmentation, and wireless VLAN/SSID capability assessment.</p>
-</div>
+<p>Continue with storage segmentation, printer isolation, management VLAN implementation, server-network design, secondary-switch integration, lab segmentation, wireless VLAN/SSID capability assessment, and persistent logging/monitoring. A separate engineering follow-up will address long-running application connection lifecycle and resilience.</p>
 </div>
 </article>
 <aside class="case-side"><h3>Technology</h3><p>FortiGate 60F<br />
