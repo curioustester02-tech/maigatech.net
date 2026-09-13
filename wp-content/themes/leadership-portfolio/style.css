@@ -1,7 +1,7 @@
 /*
 Theme Name: Leadership Portfolio
 Description: Dynamic professional portfolio with privacy-aware project disclosure.
-Version: 6.0.0
+Version: 6.0.1
 */
 :root{--navy:#071a33;--blue:#1268d6;--ink:#12233d;--muted:#65758a;--line:#dce5ef;--soft:#f5f8fc;--white:#fff;--shadow:0 16px 44px rgba(9,31,60,.10);--max:1180px;--green:#177a62;--gold:#9a6a14;--purple:#7258aa}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{text-decoration:none;color:inherit}img{max-width:100%}.wrap{width:min(var(--max),calc(100% - 38px));margin:auto}
@@ -498,4 +498,298 @@ body.page-id-8 .section > .wrap a { color: var(--blue); font-weight: 750; }
 
 @media print {
     .resume-download-card { display: none !important; }
+}
+
+/* Network Lab case-study typography */
+.case-content .lab-change-heading {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin-top: 1.6rem;
+    margin-bottom: .65rem;
+    font-weight: 700;
+}
+
+.case-content .lab-status-inline {
+    display: inline-block;
+    margin-left: .45rem;
+    padding: .2rem .55rem;
+    border-radius: 999px;
+    background: #fff4d6;
+    color: #7a5200;
+    font-family: inherit;
+    font-size: .72em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: .02em;
+    vertical-align: middle;
+}
+
+.case-content .lab-policy {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    background: #f6f8fb;
+    color: #102a43;
+    border: 1px solid #d9e2ec;
+    border-left: 4px solid #1f6feb;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 1.2rem 0;
+    overflow-x: auto;
+}
+
+
+/* Network Lab typography v2 */
+.network-lab-case {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.network-lab-case h2 {
+    font-family: inherit;
+    font-size: 1.65rem;
+    line-height: 1.3;
+    font-weight: 700;
+    margin: 2rem 0 .75rem;
+}
+
+.network-lab-case h3 {
+    font-family: inherit;
+    font-size: 1.08rem;
+    line-height: 1.45;
+    font-weight: 700;
+    margin: 1.35rem 0 .5rem;
+}
+
+.network-lab-case p,
+.network-lab-case li {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.network-lab-case .network-change-heading {
+    font-size: 1.08rem;
+    line-height: 1.45;
+    font-style: normal;
+}
+
+.network-lab-case .network-status-badge {
+    display: inline-block;
+    margin-left: .45rem;
+    padding: .18rem .5rem;
+    border-radius: 999px;
+    background: #fff4d6;
+    color: #7a5200;
+    font-family: inherit;
+    font-size: .72rem;
+    font-style: normal;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.network-lab-case .network-policy {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    background: #f6f8fb;
+    color: #102a43;
+    border: 1px solid #d9e2ec;
+    border-left: 4px solid #1f6feb;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 1.2rem 0;
+}
+
+/* Network Lab lower-half typography v3 */
+
+/* Everything after the CHG-009 heading */
+.network-lab-case .network-change-heading ~ p {
+    font-size: 1.08rem;
+    line-height: 1.72;
+}
+
+.network-lab-case .network-change-heading ~ ul {
+    font-size: 1.08rem;
+    line-height: 1.72;
+    margin-top: .7rem;
+    margin-bottom: 1.5rem;
+}
+
+.network-lab-case .network-change-heading ~ ul li {
+    font-size: 1.08rem;
+    line-height: 1.68;
+    margin-bottom: .35rem;
+}
+
+.network-lab-case .network-change-heading ~ h2 {
+    font-size: 1.9rem;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-top: 2.1rem;
+    margin-bottom: .8rem;
+}
+
+.network-lab-case .network-change-heading ~ .network-policy {
+    font-size: 1.08rem;
+    line-height: 1.72;
+}
+
+/* Network Lab lower-half typography v4 */
+.network-lab-case .network-lab-lower {
+    font-family: inherit !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+}
+
+.network-lab-case .network-lab-lower p {
+    font-family: inherit !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 1rem;
+}
+
+.network-lab-case .network-lab-lower ul {
+    font-family: inherit !important;
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    margin-top: .6rem;
+    margin-bottom: 1.5rem;
+}
+
+.network-lab-case .network-lab-lower li {
+    font-family: inherit !important;
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+    margin-bottom: .35rem;
+}
+
+.network-lab-case .network-lab-lower h2 {
+    font-family: inherit !important;
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    margin-top: 2rem !important;
+    margin-bottom: .8rem !important;
+}
+
+.network-lab-case .network-lab-lower .network-policy {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+}
+
+/* =========================================================
+   Network Lab canonical typography v5
+   One consistent scale across the entire case study
+   ========================================================= */
+
+.case-content .network-lab-case {
+    font-family: inherit !important;
+    color: var(--ink);
+}
+
+/* ALL major case-study section titles */
+.case-content .network-lab-case h2,
+.case-content .network-lab-case .network-lab-lower h2 {
+    font-family: inherit !important;
+    font-size: 32px !important;
+    line-height: 1.18 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    color: var(--navy) !important;
+    margin: 32px 0 14px !important;
+}
+
+/* ALL CHG headings, including CHG-009 */
+.case-content .network-lab-case h3,
+.case-content .network-lab-case .network-lab-lower h3,
+.case-content .network-lab-case .network-change-heading {
+    font-family: inherit !important;
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    font-weight: 800 !important;
+    letter-spacing: 0 !important;
+    color: var(--navy) !important;
+    margin: 24px 0 10px !important;
+}
+
+/* ALL normal paragraphs */
+.case-content .network-lab-case p,
+.case-content .network-lab-case .network-lab-lower p {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    font-weight: 400 !important;
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+}
+
+/* ALL lists and bullets */
+.case-content .network-lab-case ul,
+.case-content .network-lab-case .network-lab-lower ul {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    padding-left: 24px !important;
+    margin: 10px 0 22px !important;
+}
+
+.case-content .network-lab-case li,
+.case-content .network-lab-case .network-lab-lower li {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    margin: 7px 0 !important;
+}
+
+/* Bold labels inside lists/paragraphs remain bold without changing size */
+.case-content .network-lab-case p strong,
+.case-content .network-lab-case li strong {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    font-weight: 800 !important;
+}
+
+/* IoT policy block uses same body typography */
+.case-content .network-lab-case .network-policy {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    font-weight: 400 !important;
+    white-space: pre-wrap !important;
+    background: #f6f8fb !important;
+    color: var(--ink) !important;
+    border: 1px solid #d9e2ec !important;
+    border-left: 4px solid #1f6feb !important;
+    border-radius: 12px !important;
+    padding: 18px 20px !important;
+    margin: 16px 0 20px !important;
+}
+
+/* CHG-009 status indicator */
+.case-content .network-lab-case .network-status-badge {
+    display: inline-block !important;
+    margin-left: 8px !important;
+    padding: 4px 8px !important;
+    border-radius: 999px !important;
+    background: #fff4d6 !important;
+    color: #7a5200 !important;
+    font-family: inherit !important;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    font-style: normal !important;
+    font-weight: 800 !important;
+    letter-spacing: .03em !important;
+    vertical-align: middle !important;
+}
+
+/* Architecture caption */
+.case-content .network-lab-case figcaption {
+    font-family: inherit !important;
+    font-size: 16px !important;
+    line-height: 1.55 !important;
 }

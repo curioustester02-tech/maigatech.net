@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+<title id="title">Sanitized target network architecture</title>
+<desc id="desc">A FortiGate firewall connects to a FortiSwitch and separates management, servers, storage, users, IoT, printers, guest, and lab networks.</desc>
+<defs>
+  <style>
+    .bg{fill:#f6f8fb}
+    .navy{fill:#102a43}
+    .card{fill:#ffffff;stroke:#d9e2ec;stroke-width:2}
+    .line{stroke:#486581;stroke-width:3;fill:none}
+    .t1{font:700 32px Arial,sans-serif;fill:#102a43}
+    .t2{font:700 18px Arial,sans-serif;fill:#102a43}
+    .t3{font:15px Arial,sans-serif;fill:#486581}.t4{font:13px Arial,sans-serif;fill:#486581}
+    .white1{font:700 24px Arial,sans-serif;fill:#ffffff}
+    .white2{font:15px Arial,sans-serif;fill:#d9e2ec}
+    .foot{font:15px Arial,sans-serif;fill:#486581}
+  </style>
+</defs>
+
+<rect width="1600" height="820" class="bg"/>
+
+<text x="70" y="65" class="t1">Sanitized Target-State Network Architecture</text>
+<text x="70" y="98" class="t3">Public portfolio view — production identifiers, addressing, and device-specific details withheld</text>
+
+<!-- Top -->
+<rect x="650" y="130" width="300" height="84" rx="14" class="navy"/>
+<text x="800" y="164" text-anchor="middle" class="white1">Internet / ISP Edge</text>
+<text x="800" y="191" text-anchor="middle" class="white2">External services</text>
+
+<path d="M800 214 V260" class="line"/>
+
+<!-- FortiGate -->
+<rect x="620" y="260" width="360" height="100" rx="14" class="card"/>
+<text x="800" y="300" text-anchor="middle" class="t2">FortiGate Security Edge</text>
+<text x="800" y="329" text-anchor="middle" class="t3">Routing · policy · NAT · management hardening</text>
+
+<path d="M800 360 V415" class="line"/>
+
+<!-- FortiSwitch -->
+<rect x="620" y="415" width="360" height="96" rx="14" class="card"/>
+<text x="800" y="454" text-anchor="middle" class="t2">FortiSwitch Access Layer</text>
+<text x="800" y="482" text-anchor="middle" class="t3">FortiLink / 802.1Q segmentation</text>
+
+<path d="M800 511 V555" class="line"/>
+<path d="M140 555 H1470" class="line"/>
+
+<!-- Management -->
+<g>
+  <path d="M140 555 V600" class="line"/>
+  <rect x="60" y="600" width="160" height="108" rx="12" class="card"/>
+  <text x="140" y="635" text-anchor="middle" class="t2">Management</text>
+  <text x="140" y="661" text-anchor="middle" class="t3">Admin plane</text>
+  <text x="140" y="684" text-anchor="middle" class="t3">Restricted access</text>
+</g>
+
+<!-- Servers -->
+<g>
+  <path d="M330 555 V600" class="line"/>
+  <rect x="250" y="600" width="160" height="108" rx="12" class="card"/>
+  <text x="330" y="635" text-anchor="middle" class="t2">Servers</text>
+  <text x="330" y="661" text-anchor="middle" class="t3">Infrastructure</text>
+  <text x="330" y="684" text-anchor="middle" class="t3">Services</text>
+</g>
+
+<!-- Storage -->
+<g>
+  <path d="M520 555 V600" class="line"/>
+  <rect x="440" y="600" width="160" height="108" rx="12" class="card"/>
+  <text x="520" y="635" text-anchor="middle" class="t2">Storage</text>
+  <text x="520" y="661" text-anchor="middle" class="t3">NAS / backup</text>
+  <text x="520" y="684" text-anchor="middle" class="t3">Controlled access</text>
+</g>
+
+<!-- Users -->
+<g>
+  <path d="M710 555 V600" class="line"/>
+  <rect x="615" y="600" width="190" height="108" rx="12" class="card"/>
+  <text x="710" y="628" text-anchor="middle" class="t2">Users</text>
+  <text x="710" y="651" text-anchor="middle" class="t3">Corporate endpoints</text>
+  <text x="710" y="674" text-anchor="middle" class="t4">Existing production</text>
+  <text x="710" y="692" text-anchor="middle" class="t4">VLAN</text>
+</g>
+
+<!-- IoT -->
+<g>
+  <path d="M900 555 V600" class="line"/>
+  <rect x="820" y="600" width="160" height="108" rx="12" class="card"/>
+  <text x="900" y="635" text-anchor="middle" class="t2">IoT</text>
+  <text x="900" y="661" text-anchor="middle" class="t3">LoRaWAN gateway</text>
+  <text x="900" y="684" text-anchor="middle" class="t3">Least-privilege policy</text>
+</g>
+
+<!-- Printers -->
+<g>
+  <path d="M1090 555 V600" class="line"/>
+  <rect x="1010" y="600" width="160" height="108" rx="12" class="card"/>
+  <text x="1090" y="635" text-anchor="middle" class="t2">Printers</text>
+  <text x="1090" y="661" text-anchor="middle" class="t3">Shared services</text>
+  <text x="1090" y="684" text-anchor="middle" class="t3">Isolated segment</text>
+</g>
+
+<!-- Guest -->
+<g>
+  <path d="M1280 555 V600" class="line"/>
+  <rect x="1200" y="600" width="160" height="108" rx="12" class="card"/>
+  <text x="1280" y="635" text-anchor="middle" class="t2">Guest</text>
+  <text x="1280" y="661" text-anchor="middle" class="t3">Internet only</text>
+  <text x="1280" y="684" text-anchor="middle" class="t3">No internal access</text>
+</g>
+
+<!-- Lab -->
+<g>
+  <path d="M1470 555 V600" class="line"/>
+  <rect x="1390" y="600" width="160" height="108" rx="12" class="card"/>
+  <text x="1470" y="635" text-anchor="middle" class="t2">Lab</text>
+  <text x="1470" y="661" text-anchor="middle" class="t3">Testing</text>
+  <text x="1470" y="684" text-anchor="middle" class="t3">Controlled</text>
+</g>
+
+<rect x="70" y="745" width="1460" height="1" fill="#d9e2ec"/>
+<text x="70" y="780" class="foot">Design principle: preserve service availability while incrementally separating management, user, infrastructure, printer, guest, lab, and IoT traffic.</text>
+</svg>

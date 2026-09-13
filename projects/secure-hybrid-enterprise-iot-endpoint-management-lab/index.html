@@ -15,7 +15,7 @@
     gtag('config', 'G-JDG6P05LX7');
   }
 </script>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MaigaTech &#8211; IT Leadership · Microsoft 365 · SharePoint · Digital Transformation</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Secure Hybrid Enterprise, IoT &#038; Endpoint Management Lab &#8211; MaigaTech</title>
 <meta name='robots' content='max-image-preview:large' />
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -53,10 +53,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 
 <link rel='stylesheet' id='lp-style-css' href='/wp-content/themes/leadership-portfolio/style.css?ver=6.0.1' media='all' />
-<link rel="canonical" href="/" />
-<link rel='shortlink' href='/' />
+<link rel="canonical" href="/projects/secure-hybrid-enterprise-iot-endpoint-management-lab/" />
+<link rel='shortlink' href='/?p=57' />
 </head>
-<body class="home wp-singular page-template-default page page-id-6 wp-theme-leadership-portfolio"><header class="site-header">
+<body class="wp-singular project-template-default single single-project postid-57 wp-theme-leadership-portfolio"><header class="site-header">
     <div class="wrap nav">
 
         <a class="brand" href="/">
@@ -79,7 +79,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
         <div id="primary-menu" class="mobile-menu-wrapper">
 
-            <nav class="menu"><li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-39"><a href="/" aria-current="page">Home</a></li>
+            <nav class="menu"><li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-39"><a href="/">Home</a></li>
 <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="/experience/">Experience</a></li>
 <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="/projects/">Projects</a></li>
 <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="/resume/">Resume</a></li>
@@ -90,56 +90,88 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     </div>
 </header>
 <main>
-<section class="hero"><div class="wrap hero-grid">
-<div><div class="eyebrow">IT Leadership &middot; Microsoft 365 &middot; SharePoint &middot; Digital Transformation</div>
-<h1>Technology leadership that connects enterprise IT with intelligent operations.</h1>
-<p class="lead">IT leader with 11+ years of experience across infrastructure, cybersecurity, Microsoft cloud services, service delivery, major systems implementation, and SharePoint digital-workplace architecture and automation.</p>
-<div class="actions"><a class="btn primary" href="/experience/">View Experience</a><a class="btn secondary" href="/projects/">Explore Projects</a></div>
+<section class="case-hero"><div class="wrap"><div class="project-kicker">NETWORK ARCHITECTURE / CYBERSECURITY / IOT</div><h1>Secure Hybrid Enterprise, IoT &#038; Endpoint Management Lab</h1><p class="case-lead">Hands-on modernization of a mixed small-business network using Fortinet security, VLAN segmentation, management-plane hardening, privileged-access controls, least-privilege firewall policy, and controlled IoT isolation.</p><div class="case-meta"><span>Active Hands-On Portfolio</span><span>Solution Architecture / IT Operations</span><span>Public case study</span></div></div></section>
+<section class="section"><div class="wrap case-layout"><article class="case-content"><div class="network-lab-case">
+<h2>Overview</h2>
+<p>This project documents the assessment, redesign, implementation, and validation of a real hands-on network environment using enterprise-style change control. The starting environment combined user endpoints, infrastructure, storage, printing, wireless access, and IoT systems on a broadly shared network. The objective is to preserve service availability while introducing segmentation, safer administration, explicit policy boundaries, better logging, and repeatable operational documentation.</p>
+<h2>Architecture Objective</h2>
+<p>The target model separates management, servers, storage, corporate users, IoT, printers, guest access, and lab/testing systems. Each segment is intended to receive only the connectivity required for its business function, with inter-zone traffic governed by explicit firewall policy rather than broad trust.</p>
+<figure>
+  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/network-lab-architecture.svg" alt="Sanitized target-state network architecture diagram"><figcaption>Sanitized public architecture. Real internal addresses, hostnames, MAC addresses, serial numbers, credentials, SSIDs, tokens, and device-specific identifiers are intentionally withheld.</figcaption></figure>
+<h2>Security &amp; Operations Remediation</h2>
+<h3>CHG-001 &mdash; DHCP Gateway Remediation</h3>
+<p>Corrected a stale DHCP gateway configuration and established deterministic routing on the management workstation while preserving Internet access and administrative reachability.</p>
+<h3>CHG-002 &mdash; WAN Administrative Access Hardening</h3>
+<p>Removed unnecessary web-management and auxiliary administrative services from the WAN-facing interface while retaining limited troubleshooting capability.</p>
+<h3>CHG-003 to CHG-005 &mdash; Privileged Access Governance</h3>
+<p>Introduced a named MFA-protected administrator restricted to the management network, converted the built-in administrator into an emergency break-glass account, and removed an unused privileged account.</p>
+<h3>CHG-006 &mdash; Logging Baseline</h3>
+<p>Improved denied-traffic visibility while deliberately avoiding excessive high-volume session logging until persistent external logging is implemented.</p>
+<h3>CHG-007 &mdash; DNS Path Correction</h3>
+<p>Removed an unintended ISP-provided DNS override, renewed the client lease, and validated successful name resolution against the intentionally configured system resolvers.</p>
+<h3>CHG-008 &mdash; Management-Plane Separation</h3>
+<p>Removed web administration from the ordinary user network while preserving management access through the dedicated administrative path. Validation confirmed the user network could no longer reach the firewall management interface over HTTPS.</p>
+<h3 class="network-change-heading">CHG-009 &mdash; IoT Segmentation <span class="network-status-badge">IN PROGRESS</span></h3>
+<div class="network-lab-lower">
+<p>The first production-style segmentation exercise moves a wired IoT/LoRaWAN gateway out of the shared user network into a dedicated IoT VLAN. This was selected as the first migration because it is a single-device, reversible change that tests the complete segmentation workflow before storage, printing, server, and management migrations.</p>
+<div class="network-policy">IoT segment<br />
+  &rarr; Internet: explicitly allowed with NAT and session logging<br />
+  &rarr; Required application service: explicitly scoped<br />
+  &rarr; User network: denied by default except approved service path<br />
+  &rarr; Management network: denied<br />
+  &rarr; Storage / printers: denied by default</div>
+<p><strong>Validated so far:</strong> dedicated IoT VLAN creation, DHCP scope, interface restrictions, Internet firewall policy, migration of the real IoT gateway to the new network, assignment of a new DHCP lease, and successful outbound Internet traffic.</p>
+<p><strong>Current validation:</strong> the application/MQTT service path is being verified before the change is closed. The project intentionally remains marked &ldquo;in progress&rdquo; until service-layer evidence confirms the full workflow.</p>
+<h2>Change-Control Method</h2>
+<ul>
+<li>Capture current state before every meaningful change.</li>
+<li>Create an encrypted configuration backup before remediation.</li>
+<li>Make one controlled change at a time.</li>
+<li>Define the expected validation result and rollback path in advance.</li>
+<li>Record failed assumptions and corrections instead of hiding them.</li>
+<li>Separate implemented controls from future-state recommendations.</li>
+</ul>
+<h2>Target Segmentation Model</h2>
+<ul>
+<li><strong>Management:</strong> firewall, switches, administrative infrastructure.</li>
+<li><strong>Servers:</strong> directory, DNS, application and infrastructure services.</li>
+<li><strong>Storage:</strong> NAS, backup and protected data services.</li>
+<li><strong>Users:</strong> corporate Windows, macOS and mobile endpoints.</li>
+<li><strong>IoT:</strong> gateways and field/operational technology with least-privilege access.</li>
+<li><strong>Printers:</strong> shared print/scan devices isolated from user endpoints.</li>
+<li><strong>Guest:</strong> Internet-only wireless access.</li>
+<li><strong>Lab:</strong> controlled testing, Cisco switching and temporary systems.</li>
+<li><strong>Future services:</strong> reserved segment for later business requirements.</li>
+</ul>
+<h2>Architecture Decisions &amp; Trade-offs</h2>
+<ul>
+<li><strong>Preserve the existing user network during migration:</strong> reduces service disruption while new zones are introduced incrementally.</li>
+<li><strong>Do not combine unrelated changes:</strong> ISP-edge redesign was intentionally deferred while internal security remediation was underway.</li>
+<li><strong>Migrate IoT first:</strong> a single wired gateway provides a controlled test case for VLAN, DHCP, NAT, policy and rollback.</li>
+<li><strong>Scope application access explicitly:</strong> IoT systems receive access to required services instead of general access to the user network.</li>
+<li><strong>Document licensing reality:</strong> expired subscription-backed security services are not represented as active protection.</li>
+</ul>
+<h2>Public Disclosure</h2>
+<p>This case study intentionally sanitizes infrastructure evidence. Exact addressing, hostnames, MAC addresses, serial numbers, account names, credentials, SSIDs, security tokens, device identifiers, and screenshots containing sensitive administrative data are withheld or redacted. IoT devices are described generically so this case study does not disclose confidential product identity or implementation details.</p>
+<h2>Next Milestones</h2>
+<p>Complete CHG-009 application-path validation, then continue with storage segmentation, printer isolation, management VLAN implementation, server-network design, secondary-switch integration, lab segmentation, and wireless VLAN/SSID capability assessment.</p>
 </div>
-<div class="headshot-card"><img class="headshot" src="/wp-content/themes/leadership-portfolio/assets/headshot.jpg" alt="Abdoulaye Maiga"></div>
-</div></section>
-<section class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">Selected Work</div><h2>Enterprise IT, Microsoft 365 & digital workplaces</h2></div>
-<div class="grid3">
-<div class="card"><div class="icon">&#9638;</div><h3>Enterprise IT Operations</h3><p>Infrastructure, Microsoft cloud services, service delivery, cybersecurity, resilience, vendor management, and operational improvement.</p></div>
-<div class="card"><div class="icon">&#9670;</div><h3>Microsoft 365 & SharePoint</h3><p>SharePoint Online information architecture, modern pages, governance, PnP PowerShell automation, Microsoft Teams operating models, and reusable digital-workplace standards.</p></div>
-<div class="card"><div class="icon">&#8961;</div><h3>Infrastructure Engineering</h3><p>Hands-on networking, firewalling, managed switching, storage, Docker, identity, endpoint administration, troubleshooting, and operational resilience.</p></div>
 </div>
-<div class="metrics"><div class="metric"><strong>11+</strong><span>Years in IT leadership & operations</span></div><div class="metric"><strong>500+</strong><span>Users supported in complex environments</span></div><div class="metric"><strong>99.9%</strong><span>High-availability operations</span></div><div class="metric"><strong>10-person</strong><span>Technology team leadership</span></div></div>
-</div></section>
-<section class="section alt"><div class="wrap"><div class="section-head"><div class="eyebrow">Featured Projects</div><h2>Built work, presented at the right level of disclosure</h2><p class="lead">Only approved work is shown in detail. Confidential initiatives may be acknowledged by a generic alias only; their real product identity, technical details, and assets remain private.</p></div>
-<div class="project-grid"><article class="project-card visibility-public"><div class="project-shot"><img src="/wp-content/themes/leadership-portfolio/assets/sharepoint/bolimasso-sharepoint-enterprise-public.png" alt="Bolimasso Enterprise Digital Workplace SharePoint Online portfolio screenshot"></div><div class="project-body">
-<div class="project-kicker">MICROSOFT 365 / SHAREPOINT</div><h3>Bolimasso Enterprise Digital Workplace — SharePoint Online</h3><span class="status">Deployed Portfolio Demo · Active Build</span><p>Designed and deployed a SharePoint Online digital workplace demonstrating enterprise information architecture, modern pages, PnP PowerShell automation, Teams governance, reusable page standards, and corporate digital-workplace workflows.</p>
-<div class="disclosure disclosure-public">Public case study</div>
-<a class="case-link" href="/projects/bolimasso-sharepoint-enterprise-intranet/">View case study &rarr;</a></div></article>
-<article class="project-card visibility-public"><div class="project-shot"><img src="/wp-content/themes/leadership-portfolio/assets/healthcare-placeholder.svg" alt="Public-safe project illustration"></div><div class="project-body">
-<div class="project-kicker">HEALTHCARE IT / EPIC EMR</div><h3>EPIC EMR Implementation &#038; Healthcare Systems Modernization</h3><span class="status">Completed - Production Go-Live</span><p>Led a multi-vendor EPIC EMR implementation and healthcare technology modernization initiative supporting a 500+ user environment, delivering a HIPAA-compliant go-live with zero critical downtime.</p>
-<div class="disclosure disclosure-public">Public case study</div>
-<a class="case-link" href="/projects/epic-emr-healthcare-systems-modernization/">View case study &rarr;</a></div></article>
-<article class="project-card visibility-public"><div class="project-shot"><img src="/wp-content/themes/leadership-portfolio/assets/enterprise-placeholder.svg" alt="Public-safe project illustration"></div><div class="project-body">
-<div class="project-kicker">ENTERPRISE IT / INFRASTRUCTURE</div><h3>Enterprise IT Operations &#038; Infrastructure Modernization</h3><span class="status">Enterprise Operations Program</span><p>Led enterprise infrastructure, cloud, systems, applications, and operational technology initiatives focused on reliability, scalability, service quality, and business continuity.</p>
-<div class="disclosure disclosure-public">Public case study</div>
-<a class="case-link" href="/projects/enterprise-it-operations-infrastructure-modernization/">View case study &rarr;</a></div></article>
-<article class="project-card visibility-public"><div class="project-shot"><img src="/wp-content/themes/leadership-portfolio/assets/enterprise-placeholder.svg" alt="Public-safe project illustration"></div><div class="project-body">
-<div class="project-kicker">CYBERSECURITY / GOVERNANCE</div><h3>Cybersecurity, Compliance &#038; Disaster Recovery Program</h3><span class="status">Security &amp; Resilience Program</span><p>Implemented security controls, governance, and disaster-recovery improvements spanning MFA, RBAC, firewall hardening, NIST/ISO-aligned practices, HIPAA requirements, and business continuity.</p>
-<div class="disclosure disclosure-public">Public case study</div>
-<a class="case-link" href="/projects/cybersecurity-compliance-disaster-recovery/">View case study &rarr;</a></div></article>
-<article class="project-card visibility-public"><div class="project-shot"><img src="/wp-content/themes/leadership-portfolio/assets/enterprise-placeholder.svg" alt="Public-safe project illustration"></div><div class="project-body">
-<div class="project-kicker">MICROSOFT 365 / CLOUD LAB</div><h3>Microsoft 365, Identity &#038; Cloud Administration Lab</h3><span class="status">Active Hands-On Portfolio</span><p>Hands-on Microsoft 365 portfolio environment focused on identity administration, SharePoint Online, Teams governance, automation, security, and modern cloud-based IT operations.</p>
-<div class="disclosure disclosure-public">Public case study</div>
-<a class="case-link" href="/projects/microsoft-365-identity-cloud-administration/">View case study &rarr;</a></div></article>
-<article class="project-card visibility-public"><div class="project-shot"><img src="/wp-content/themes/leadership-portfolio/assets/network-lab-architecture.svg" alt="Sanitized secure hybrid enterprise network architecture diagram"></div><div class="project-body">
-<div class="project-kicker">NETWORK ARCHITECTURE / CYBERSECURITY / IOT</div><h3>Secure Hybrid Enterprise, IoT &#038; Endpoint Management Lab</h3><span class="status">Active Hands-On Portfolio</span><p>Hands-on modernization of a mixed small-business network using Fortinet security, VLAN segmentation, management-plane hardening, privileged-access controls, least-privilege firewall policy, and controlled IoT isolation.</p>
-<div class="disclosure disclosure-public">Public case study</div>
-<a class="case-link" href="/projects/secure-hybrid-enterprise-iot-endpoint-management-lab/">View case study &rarr;</a></div></article>
-<article class="project-card confidential-alias-card"><div class="project-shot confidential-lock"><span aria-hidden="true">&#9670;</span></div><div class="project-body">
-<div class="project-kicker">CONFIDENTIAL TECHNOLOGY INITIATIVE</div><h3>Smart Farming Project</h3><span class="status">Confidential &middot; Details withheld</span>
-<p>Private smart-farming technology initiative. Product identity, implementation details, screenshots, architecture, source material, and project assets are not publicly disclosed.</p>
-<div class="disclosure disclosure-confidential">Confidential &mdash; generic portfolio alias only</div>
-</div></article>
-</div>
-<div class="section-action"><a class="btn ink" href="/projects/">View All Projects</a></div>
-</div></section>
-</main><footer class="footer"><div class="wrap footer-in">
+</article>
+<aside class="case-side"><h3>Technology</h3><p>FortiGate 60F<br />
+FortiSwitch 124F-FPOE<br />
+Cisco Business Switching<br />
+802.1Q VLANs<br />
+FortiLink / LACP<br />
+DHCP / DNS / NAT<br />
+SD-WAN foundation<br />
+Windows / macOS<br />
+Docker<br />
+MQTT<br />
+LoRaWAN / IoT</p></aside></div></section>
+<section class="section"><div class="wrap"><a class="btn ink" href="/projects/">← Back to Projects</a></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-in">
 <strong>MaigaTech</strong><small>IT Leadership &middot; Enterprise Technology &middot; Microsoft 365 &middot; Digital Transformation<br>Selected work and case studies presented with appropriate confidentiality.</small><small><a href="/privacy-policy/">Privacy Policy</a><br>&copy; 2026 Abdoulaye Maiga</small>
 </div></footer><script id="maigatech-mobile-menu-js" src="/wp-content/themes/leadership-portfolio/assets/mobile-menu.js?ver=1.0.0"></script>
 <script id="wp-emoji-settings" type="application/json">
