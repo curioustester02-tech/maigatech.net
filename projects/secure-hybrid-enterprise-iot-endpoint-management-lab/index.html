@@ -99,17 +99,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <figure>
   <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/network-lab-architecture.svg" alt="Sanitized target-state network architecture diagram"><figcaption>Sanitized public architecture. Production identifiers, addressing, account data, radio identifiers, and device-specific implementation details are intentionally withheld.</figcaption></figure>
 <h2>Security &amp; Operations Remediation</h2>
-<h3>CHG-001 &mdash; DHCP Gateway Remediation</h3>
+<h3 class="network-change-heading">CHG-001 &mdash; DHCP Gateway Remediation <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Corrected a stale DHCP gateway configuration and established deterministic routing on the management workstation while preserving Internet access and administrative reachability.</p>
-<h3>CHG-002 &mdash; WAN Administrative Access Hardening</h3>
+<h3 class="network-change-heading">CHG-002 &mdash; WAN Administrative Access Hardening <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Removed unnecessary web-management and auxiliary administrative services from the WAN-facing interface while retaining limited troubleshooting capability.</p>
-<h3>CHG-003 to CHG-005 &mdash; Privileged Access Governance</h3>
+<h3 class="network-change-heading">CHG-003 to CHG-005 &mdash; Privileged Access Governance <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Introduced a named MFA-protected administrator restricted to the management network, converted the built-in administrator into an emergency break-glass account, and removed an unused privileged account.</p>
-<h3>CHG-006 &mdash; Logging Baseline</h3>
+<h3 class="network-change-heading">CHG-006 &mdash; Logging Baseline <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Improved denied-traffic visibility while deliberately avoiding excessive high-volume session logging until persistent external logging is implemented.</p>
-<h3>CHG-007 &mdash; DNS Path Correction</h3>
+<h3 class="network-change-heading">CHG-007 &mdash; DNS Path Correction <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Removed an unintended ISP-provided DNS override, renewed the client lease, and validated successful name resolution against the intentionally configured system resolvers.</p>
-<h3>CHG-008 &mdash; Management-Plane Separation</h3>
+<h3 class="network-change-heading">CHG-008 &mdash; Management-Plane Separation <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Removed web administration from the ordinary user network while preserving management access through the dedicated administrative path. Validation confirmed that the user network could no longer reach the firewall management interface over HTTPS.</p>
 <h3 class="network-change-heading">CHG-009 &mdash; IoT Segmentation &amp; End-to-End Service Validation <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>A wired LoRaWAN/IoT gateway was migrated out of the shared user network and into a dedicated IoT segment. The migration was deliberately performed as a reversible, single-device change to validate the full segmentation workflow before moving storage, printing, servers, and additional infrastructure.</p>
