@@ -1,7 +1,7 @@
 /*
 Theme Name: Leadership Portfolio
 Description: Dynamic professional portfolio with privacy-aware project disclosure.
-Version: 6.0.2
+Version: 6.0.3
 */
 :root{--navy:#071a33;--blue:#1268d6;--ink:#12233d;--muted:#65758a;--line:#dce5ef;--soft:#f5f8fc;--white:#fff;--shadow:0 16px 44px rgba(9,31,60,.10);--max:1180px;--green:#177a62;--gold:#9a6a14;--purple:#7258aa}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{text-decoration:none;color:inherit}img{max-width:100%}.wrap{width:min(var(--max),calc(100% - 38px));margin:auto}
@@ -147,9 +147,9 @@ Version: 6.0.2
     --text-lead: 1.125rem;   /* 18px */
     --text-card-title: 1.25rem; /* 20px */
 
-    --title-section: clamp(1.875rem, 3vw, 2.25rem); /* 30–36px */
-    --title-page: clamp(2.25rem, 4vw, 3rem);       /* 36–48px */
-    --title-hero: clamp(2.5rem, 4.5vw, 3.5rem);    /* 40–56px */
+    --title-section: clamp(1.875rem, 3vw, 2.25rem); /* 30-36px */
+    --title-page: clamp(2.25rem, 4vw, 3rem);       /* 36-48px */
+    --title-hero: clamp(2.5rem, 4.5vw, 3.5rem);    /* 40-56px */
 }
 
 /* Base typography */
@@ -800,3 +800,90 @@ body.page-id-8 .section > .wrap a { color: var(--blue); font-weight: 750; }
     color: #126b49 !important;
     border: 1px solid #b8e3cc !important;
 }
+/* GitHub case-study typography and workflow */
+.case-content .github-case {
+    font-family: inherit;
+    color: var(--ink);
+}
+.case-content .github-case h2 {
+    font-family: inherit;
+    font-size: 32px;
+    line-height: 1.18;
+    font-weight: 800;
+    letter-spacing: -.025em;
+    color: var(--navy);
+    margin: 32px 0 14px;
+}
+.case-content .github-case p,
+.case-content .github-case li {
+    font-family: inherit;
+    font-size: 17px;
+    line-height: 1.65;
+}
+.case-content .github-case ul {
+    padding-left: 24px;
+    margin: 10px 0 22px;
+}
+.case-content .github-case li {
+    margin: 7px 0;
+}
+.case-content .github-case code {
+    font-size: .92em;
+    background: #f2f5f8;
+    border: 1px solid #e1e8ef;
+    border-radius: 6px;
+    padding: .08em .35em;
+}
+.github-workflow {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 14px;
+    margin: 22px 0 30px;
+}
+.github-step {
+    min-height: 128px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(9,31,60,.07);
+}
+.github-step strong {
+    display: inline-grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: var(--navy);
+    color: #fff;
+    margin-bottom: 12px;
+}
+.github-step span {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--navy);
+}
+.github-step small {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.4;
+}
+.github-repo-link {
+    display: inline-block;
+    margin-top: 4px;
+    color: var(--blue);
+    font-weight: 800;
+}
+.github-repo-link:hover {
+    text-decoration: underline;
+}
+@media(max-width:900px){
+    .github-workflow{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+    .github-workflow{grid-template-columns:1fr}
+}
+
