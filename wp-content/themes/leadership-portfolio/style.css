@@ -887,3 +887,94 @@ body.page-id-8 .section > .wrap a { color: var(--blue); font-weight: 750; }
     .github-workflow{grid-template-columns:1fr}
 }
 
+
+/* === MaigaTech v7.0 executive CIO-track upgrade === */
+.executive-depth{position:relative}
+.executive-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:28px}
+.executive-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--surface,#fff)}
+.executive-card h3{margin-top:0}
+.executive-card p{margin-bottom:0}
+.tech-stack{display:flex;flex-wrap:wrap;gap:10px}
+.tech-stack span{display:inline-flex;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:.92rem}
+.project-card{transition:transform .18s ease,box-shadow .18s ease}
+.project-card:hover{transform:translateY(-3px)}
+.project-card .project-shot img{width:100%;height:100%;object-fit:cover}
+.contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}
+.contact-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.contact-proof>div{padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--surface,#fff)}
+.contact-proof strong{display:block;margin-bottom:7px}
+@media(max-width:980px){.executive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.executive-grid,.contact-proof{grid-template-columns:1fr}}
+/* === MaigaTech v7.3.1 visual review fixes === */
+
+/* Contact page: use the same site-wide wrap as the header/navigation. */
+body.page-id-8 main > .section > .wrap{
+  width:min(var(--max),calc(100% - 38px)) !important;
+  max-width:var(--max) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+body.page-id-8 .editable-page-content{
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+
+/* Strong contrast for primary CTA buttons on light pages. */
+a.btn.primary,
+a.btn.primary:visited,
+.btn.primary,
+.btn.primary:visited{
+  background:#1472e6 !important;
+  border-color:#1472e6 !important;
+  color:#fff !important;
+}
+a.btn.primary:hover,
+a.btn.primary:focus,
+.btn.primary:hover,
+.btn.primary:focus{
+  background:#0f5fc5 !important;
+  border-color:#0f5fc5 !important;
+  color:#fff !important;
+}
+body.page-id-8 .contact-actions .btn.secondary,
+body.page-id-8 .contact-actions .btn.secondary:visited{
+  background:#fff !important;
+  color:var(--blue) !important;
+  border-color:#7690ad !important;
+}
+
+/* Project card visuals: preserve the complete illustration instead of cropping it. */
+.project-card .project-shot{
+  height:auto !important;
+  min-height:0;
+  aspect-ratio:16 / 9;
+  overflow:hidden;
+  background:#f5f8fc;
+}
+.project-card .project-shot img{
+  display:block;
+  width:100% !important;
+  height:100% !important;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain !important;
+  object-position:center center;
+  padding:8px 10px;
+  background:#f5f8fc;
+}
+.project-card .project-body{
+  position:relative;
+  z-index:1;
+  background:#fff;
+}
+
+@media(max-width:650px){
+  body.page-id-8 main > .section > .wrap{
+    width:calc(100% - 26px) !important;
+  }
+  .project-card .project-shot{
+    aspect-ratio:16 / 9;
+  }
+}

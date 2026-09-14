@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<rect width="800" height="450" rx="28" fill="#f5f7fa"/>
+<text x="64" y="54" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#172b3a">Enterprise Infrastructure &amp; Operations</text>
+<g fill="#fff" stroke="#426985" stroke-width="3">
+<rect x="70" y="120" width="170" height="92" rx="18"/><rect x="315" y="120" width="170" height="92" rx="18"/><rect x="560" y="120" width="170" height="92" rx="18"/>
+<rect x="190" y="285" width="170" height="92" rx="18"/><rect x="440" y="285" width="170" height="92" rx="18"/>
+</g>
+<g stroke="#8aa6b9" stroke-width="5" fill="none"><path d="M240 166h75M485 166h75M155 212l75 73M645 212l-75 73M360 331h80"/></g>
+<g font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#234b65" text-anchor="middle">
+<text x="155" y="173">Identity</text><text x="400" y="173">Network</text><text x="645" y="173">Cloud</text><text x="275" y="338">Systems</text><text x="525" y="338">Operations</text>
+</g></svg>
