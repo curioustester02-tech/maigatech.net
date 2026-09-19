@@ -18,7 +18,7 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Secure Hybrid Enterprise, IoT &#038; Endpoint Management Lab &#8211; Abdoulaye Maiga</title>
 <meta name='robots' content='max-image-preview:large' />
 
-<meta name="description" content="Hands-on modernization of a mixed small-business environment using enterprise firewalling, security-zone segmentation, management-plane hardening, least-privilege service policy, protected storage/printing, and validated IoT/LoRaWAN service continuity.">
+<meta name="description" content="Hands-on modernization of a mixed small-business environment using enterprise firewalling, dedicated management and workload VLANs, Cisco/Fortinet switching, 802.1Q trunking, least-privilege policy, protected storage/printing, and validated IoT/LoRaWAN service continuity.">
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -92,7 +92,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     </div>
 </header>
 <main>
-<section class="case-hero"><div class="wrap"><div class="project-kicker">ENTERPRISE ARCHITECTURE / CYBERSECURITY / IOT</div><h1>Secure Hybrid Enterprise, IoT &#038; Endpoint Management Lab</h1><p class="case-lead">Hands-on modernization of a mixed small-business environment using enterprise firewalling, security-zone segmentation, management-plane hardening, least-privilege service policy, protected storage/printing, and validated IoT/LoRaWAN service continuity.</p><div class="case-meta"><span>Active Hands-On Portfolio</span><span>Solution Architecture / IT Operations</span><span>Public case study</span></div></div></section>
+<section class="case-hero"><div class="wrap"><div class="project-kicker">ENTERPRISE ARCHITECTURE / CYBERSECURITY / IOT</div><h1>Secure Hybrid Enterprise, IoT &#038; Endpoint Management Lab</h1><p class="case-lead">Hands-on modernization of a mixed small-business environment using enterprise firewalling, dedicated management and workload VLANs, Cisco/Fortinet switching, 802.1Q trunking, least-privilege policy, protected storage/printing, and validated IoT/LoRaWAN service continuity.</p><div class="case-meta"><span>Active Hands-On Portfolio</span><span>Solution Architecture / IT Operations</span><span>Public case study</span></div></div></section>
 <section class="section"><div class="wrap case-layout"><article class="case-content"><div class="network-lab-case">
 <h2>Executive Overview</h2>
 <p>This case study documents the staged modernization of a real mixed small-business technology environment using enterprise-style architecture, change control, rollback planning, and validation. The starting environment combined users, infrastructure, storage, printing, wireless access, and IoT systems on broadly shared network paths. The target is a controlled enterprise foundation in which management, users, storage, printers, servers, lab systems, guests, and IoT/OT workloads are separated by security zone and connected only through explicit policy.</p>
@@ -100,20 +100,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Business &amp; Architecture Problem</h2>
 <p>The original environment functioned, but several unrelated device classes shared the same user network. That design increased east-west trust, mixed administrative and business traffic, and made it difficult to apply least-privilege policy. The modernization program therefore focuses on service continuity while reducing implicit trust and improving operational control.</p>
 <h2>Target Architecture</h2>
-<p>The target architecture separates management, servers, protected storage, users, IoT/OT, printers, guests, and lab/testing systems. Inter-zone access is explicitly governed by business need instead of broad network adjacency.</p>
+<p>The target architecture separates management, servers, protected storage, users, IoT/OT, printers, guests, and lab/testing systems. Inter-zone access is explicitly governed by business need instead of broad network adjacency. The physical design now also includes a secondary Cisco managed switch connected to the primary switching layer through an 802.1Q trunk.</p>
 <figure>
   <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/network-lab-architecture.svg" alt="Sanitized target-state enterprise network architecture diagram"><figcaption>Sanitized target-state architecture. Production identifiers, addressing, credentials, account data, and implementation-specific secrets are intentionally withheld.</figcaption></figure>
 <h2>Network Segmentation Foundation — Current Progress</h2>
-<p>The current implementation has moved from management hardening into workload isolation. Dedicated IoT, printer, and storage zones are now operational, with the dedicated management plane next.</p>
+<p>The implementation has advanced beyond workload isolation into a dedicated privileged-management plane and multi-switch VLAN architecture. Management, IoT, printer, storage, and server zones are operational; Cisco/Fortinet inter-switch trunking has been validated for management and server traffic. Storage and lab VLAN membership is provisioned across the trunk, with endpoint validation still in progress.</p>
 <figure>
-  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/enterprise-foundation-progress.svg" alt="Sanitized enterprise segmentation progress showing IoT, printer, and storage zones completed and management next"><figcaption>Current public-safe progress: IoT, printer, and storage isolation validated; dedicated management-plane implementation is the next milestone.</figcaption></figure>
+  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/enterprise-foundation-progress.svg" alt="Sanitized enterprise segmentation progress showing management, server, IoT, printer, and storage zones operational with Cisco trunk validation in progress"><figcaption>Current public-safe progress: the dedicated management plane and server segment are validated across the multi-switch architecture; storage and lab endpoint validation across the Cisco trunk remains in progress.</figcaption></figure>
 <h2>Security &amp; Operations Remediation</h2>
 <h3 class="network-change-heading">CHG-001 — DHCP Gateway Remediation <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Corrected a stale DHCP gateway configuration and established deterministic routing on the management workstation while preserving Internet access and administrative reachability.</p>
 <h3 class="network-change-heading">CHG-002 — WAN Administrative Access Hardening <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Removed unnecessary web-management and auxiliary administrative services from the WAN-facing interface while retaining limited troubleshooting capability.</p>
 <h3 class="network-change-heading">CHG-003 to CHG-005 — Privileged Access Governance <span class="network-status-badge network-status-pass">PASS</span></h3>
-<p>Introduced a named MFA-protected administrator restricted to the management network, converted the built-in administrator into an emergency break-glass account, and removed an unused privileged account.</p>
+<p>Introduced a named MFA-protected administrator restricted to trusted management sources, converted the built-in administrator into an emergency break-glass account, and removed an unused privileged account.</p>
 <h3 class="network-change-heading">CHG-006 — Logging Baseline <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Improved denied-traffic visibility while deliberately avoiding excessive high-volume session logging until persistent external logging is implemented.</p>
 <h3 class="network-change-heading">CHG-007 — DNS Path Correction <span class="network-status-badge network-status-pass">PASS</span></h3>
@@ -145,10 +145,41 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li>Windows and macOS access validated after migration.</li>
 <li>Authentication and share enumeration validated.</li>
 <li>Real create/read/delete operations completed using non-production test data.</li>
-<li>Storage web administration remains withheld from the ordinary user network pending management-VLAN implementation.</li>
+<li>Storage web administration is available through the dedicated management plane rather than the ordinary user network.</li>
 </ul>
+<h3 class="network-change-heading">CHG-013 — Dedicated Management VLAN <span class="network-status-badge network-status-pass">PASS</span></h3>
+<p>A dedicated privileged-management plane was established for infrastructure administration. The primary Windows management workstation now uses a dedicated management interface while ordinary user connectivity remains separate.</p>
+<ul>
+<li>Dedicated management VLAN and DHCP scope implemented.</li>
+<li>MFA-protected firewall administration validated from the management path.</li>
+<li>Primary management workstation validated against firewall and switch administration.</li>
+<li>Explicit management policies provide administrative access to storage, printer, and IoT infrastructure without reopening the ordinary user network.</li>
+<li>A separate fallback management endpoint and legacy recovery path were retained during the migration.</li>
+<li>Host firewall, disk encryption, Secure Boot, TPM, forwarding, bridge, and Internet Connection Sharing state were reviewed on the primary management workstation.</li>
+</ul>
+<h3 class="network-change-heading">CHG-014A — Cisco Management Integration <span class="network-status-badge network-status-pass">PASS</span></h3>
+<p>A Cisco managed switch was integrated as a secondary access/lab switch under the dedicated management plane. The switch was first validated through a direct fallback path, then connected to the production switching layer after management reachability was confirmed.</p>
+<ul>
+<li>Management moved into the dedicated management VLAN.</li>
+<li>Direct fallback management port retained.</li>
+<li>Production management path validated from the privileged workstation.</li>
+<li>VLAN roles aligned across the switching environment for management, servers, storage, and lab/testing.</li>
+</ul>
+<h3 class="network-change-heading">CHG-014B — 802.1Q Trunk &amp; Server VLAN Validation <span class="network-status-badge">VALIDATED PATHS</span></h3>
+<p>The Cisco uplink and primary managed-switch port were converted into a matched 802.1Q trunk. The management VLAN remains native/untagged across the link while server, storage, and lab VLANs are carried as tagged traffic.</p>
+<p><strong>Validated for the management and server paths:</strong></p>
+<ul>
+<li>Management access remained available throughout the trunk conversion.</li>
+<li>A physical Windows endpoint on a Cisco server access port received the intended server-VLAN DHCP configuration.</li>
+<li>A sustained gateway test completed 235 consecutive replies with 0% packet loss.</li>
+<li>Firewall/NAT policy provided Internet access to the server VLAN.</li>
+<li>DNS resolution succeeded through the configured enterprise resolver path.</li>
+<li>The server-segment endpoint could not administer the management-plane switch, while the privileged management workstation retained access.</li>
+</ul>
+<p><strong>Still in progress:</strong> Cisco-side endpoint validation for the storage and lab VLANs. These are provisioned across the trunk but are not presented as fully validated yet.</p>
 <h2>Troubleshooting &amp; Fault Isolation</h2>
-<p>The work deliberately separates network, transport, service, and application evidence. Firewall counters are not treated as proof of application success. For IoT, the path was validated independently through network-server events, packet capture, MQTT publish/subscribe, and application ingestion. For storage, connectivity was separated from authentication and permissions before the NAS was moved. This prevented an SMB credential issue from being misdiagnosed as a network fault.</p>
+<p>The work deliberately separates physical link, VLAN membership, routing, transport, service, authentication, and application evidence. Firewall counters are not treated as proof of application success. For IoT, the path was validated independently through network-server events, packet capture, MQTT publish/subscribe, and application ingestion. For storage, connectivity was separated from authentication and permissions before the NAS was moved.</p>
+<p>During server-VLAN trunk testing, a test workstation briefly had both Wi-Fi and Ethernet active. Rather than treating confusing reachability symptoms as a trunk failure, Wi-Fi was disabled and the Ethernet path was re-tested in isolation. The resulting sustained test completed 235 gateway replies with 0% loss. This reinforced the operating principle of eliminating alternate paths before diagnosing VLAN or routing faults.</p>
 <h2>Change-Control Method</h2>
 <ul>
 <li>Capture current state before every meaningful change.</li>
@@ -156,23 +187,26 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li>Build the destination network and firewall policy before migrating the device.</li>
 <li>Make one controlled infrastructure change at a time.</li>
 <li>Validate both security behavior and business functionality after migration.</li>
+<li>Use a clean single-path test when dual-homed endpoints could obscure results.</li>
 <li>Record failed assumptions and corrections instead of hiding them.</li>
 <li>Separate implemented controls from future-state recommendations.</li>
 </ul>
 <h2>Architecture Decisions &amp; Trade-offs</h2>
 <ul>
 <li><strong>Incremental segmentation:</strong> preserves availability while security zones are introduced one workload at a time.</li>
+<li><strong>Dedicated management plane:</strong> infrastructure administration is separated from ordinary user traffic rather than temporarily reopening administrative services on the user network.</li>
+<li><strong>802.1Q trunking:</strong> extends multiple controlled security zones to a secondary switch while preserving a native management path.</li>
 <li><strong>Central DHCP reservations:</strong> provides stable infrastructure dependencies without spreading manual static-address configuration across devices.</li>
 <li><strong>Service-specific printer access:</strong> preserves printing while withholding administrative interfaces from ordinary users.</li>
 <li><strong>Host-scoped storage access:</strong> protects sensitive storage more aggressively than a broad user-subnet allow rule.</li>
-<li><strong>Management access deferred to the management plane:</strong> storage and printer administration will move to the dedicated management VLAN rather than being opened temporarily from the user network.</li>
-<li><strong>Validate at multiple layers:</strong> routing, transport, authentication, service behavior, and application outcomes are tested independently.</li>
+<li><strong>Management isolation for server endpoints:</strong> server Internet access does not imply administrative access to network infrastructure.</li>
+<li><strong>Validate at multiple layers:</strong> link state, VLAN assignment, routing, transport, authentication, service behavior, and application outcomes are tested independently.</li>
 <li><strong>Document licensing reality:</strong> expired subscription-backed security services are not represented as active protection.</li>
 </ul>
 <h2>Enterprise Infrastructure Roadmap</h2>
-<p>The current work represents the <strong>Network Segmentation Foundation</strong>, not the completed enterprise environment. The broader Enterprise Infrastructure Baseline v1.0 will continue through:</p>
+<p>The segmentation foundation is operational but the broader Enterprise Infrastructure Baseline v1.0 is still being built. The next phases include:</p>
 <ul>
-<li>Dedicated management VLAN and privileged infrastructure-management path.</li>
+<li>Complete storage and lab VLAN endpoint validation across the Cisco trunk.</li>
 <li>Server and virtualization architecture.</li>
 <li>Identity and access architecture.</li>
 <li>Endpoint management using MDM and MAM.</li>
@@ -183,12 +217,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li>Firewall-policy optimization and final operational validation.</li>
 </ul>
 <h2>Leadership Perspective</h2>
-<p>The objective is not simply to configure individual devices. The work demonstrates architecture sequencing, risk reduction, service continuity, change governance, fault isolation, documentation, and the ability to move between business requirements and hands-on implementation. The IoT/OT layer will be expanded only after the enterprise foundation is mature, allowing operational technology to be integrated into an intentionally governed environment rather than an unfinished network.</p>
+<p>The objective is not simply to configure individual devices. The work demonstrates architecture sequencing, risk reduction, service continuity, change governance, fault isolation, documentation, and the ability to move between business requirements and hands-on implementation. The environment is being built as a governed platform in which network, endpoint, server, and IoT/OT capabilities can be introduced without returning to broad implicit trust.</p>
 <h2>Public Disclosure</h2>
 <p>This case study intentionally sanitizes infrastructure evidence. Exact addressing, hostnames, MAC addresses, serial numbers, account names, credentials, SSIDs, security tokens, NAS share names, radio identifiers, tenant/application IDs, and screenshots containing sensitive administrative data are withheld or redacted.</p>
 <h2>Next Milestone</h2>
-<h3 class="network-change-heading">CHG-013 — Dedicated Management VLAN <span class="network-status-badge">NEXT</span></h3>
-<p>establish the privileged management plane, validate administrative access to infrastructure from the management workstation, preserve the existing recovery path until the new management zone is proven, and begin retiring temporary user-network management exceptions.</p>
+<p><strong>CHG-014 closeout:</strong> complete Cisco-side endpoint validation for the storage and lab VLANs, confirm the final trunk membership is intentionally minimal, and then continue into the server/virtualization phase of the enterprise baseline.</p>
 </div>
 </article>
 <aside class="case-side"><h3>Technology</h3><p>FortiGate 60F<br />

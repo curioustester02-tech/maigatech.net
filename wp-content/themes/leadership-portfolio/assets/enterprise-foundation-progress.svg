@@ -1,55 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
   <title id="title">Enterprise segmentation foundation progress</title>
-  <desc id="desc">Sanitized architecture showing user network connected through an enterprise firewall to isolated IoT, printer, and storage zones, with management zone marked as the next milestone.</desc>
+  <desc id="desc">Sanitized architecture showing an enterprise firewall and primary managed switch with operational management, IoT, printer, storage and server zones. A secondary managed switch is connected by an 802.1Q trunk. Storage and lab endpoint validation across the secondary switch remains in progress.</desc>
   <defs>
     <style>
-      .box{fill:#fff;stroke:#25364a;stroke-width:3;rx:18;ry:18}
+      .bg{fill:#f8fafc}
+      .core{fill:#fff;stroke:#25364a;stroke-width:3;rx:18;ry:18}
       .done{fill:#eef7f1;stroke:#2e6b49;stroke-width:3;rx:18;ry:18}
-      .next{fill:#f7f3ea;stroke:#8a6d2f;stroke-width:3;stroke-dasharray:10 8;rx:18;ry:18}
+      .pending{fill:#f7f3ea;stroke:#8a6d2f;stroke-width:3;stroke-dasharray:10 8;rx:18;ry:18}
       .title{font:700 30px Arial,sans-serif;fill:#172536}
-      .label{font:700 22px Arial,sans-serif;fill:#172536}
-      .small{font:400 17px Arial,sans-serif;fill:#425466}
-      .status{font:700 16px Arial,sans-serif;fill:#2e6b49}
-      .statusnext{font:700 16px Arial,sans-serif;fill:#8a6d2f}
+      .label{font:700 20px Arial,sans-serif;fill:#172536}
+      .small{font:400 15px Arial,sans-serif;fill:#425466}
+      .status{font:700 14px Arial,sans-serif;fill:#2e6b49}
+      .statusp{font:700 14px Arial,sans-serif;fill:#8a6d2f}
       .line{stroke:#4d6377;stroke-width:4;fill:none}
+      .tag{font:700 13px Arial,sans-serif;fill:#425466}
     </style>
   </defs>
-  <rect width="1200" height="700" fill="#f8fafc"/>
-  <text x="600" y="55" text-anchor="middle" class="title">Network Segmentation Foundation — Current Progress</text>
+  <rect width="1200" height="760" class="bg"/>
+  <text x="600" y="48" text-anchor="middle" class="title">Network Segmentation Foundation — v0.5</text>
+  <text x="600" y="76" text-anchor="middle" class="small">Sanitized current-state progress</text>
 
-  <rect x="465" y="95" width="270" height="110" class="box"/>
+  <rect x="470" y="105" width="260" height="80" class="core"/>
   <text x="600" y="138" text-anchor="middle" class="label">Enterprise Firewall</text>
-  <text x="600" y="169" text-anchor="middle" class="small">routing • policy • logging</text>
+  <text x="600" y="164" text-anchor="middle" class="small">Inter-VLAN policy · NAT · DHCP</text>
 
-  <rect x="70" y="285" width="240" height="120" class="box"/>
-  <text x="190" y="330" text-anchor="middle" class="label">User Network</text>
-  <text x="190" y="365" text-anchor="middle" class="small">authorized endpoints</text>
+  <path d="M600 185 L600 225" class="line"/>
+  <rect x="450" y="225" width="300" height="80" class="core"/>
+  <text x="600" y="258" text-anchor="middle" class="label">Primary Managed Switch</text>
+  <text x="600" y="284" text-anchor="middle" class="small">Access VLANs + 802.1Q uplink</text>
 
-  <rect x="350" y="285" width="240" height="120" class="done"/>
-  <text x="470" y="325" text-anchor="middle" class="label">IoT Zone</text>
-  <text x="470" y="357" text-anchor="middle" class="status">PASS</text>
-  <text x="470" y="382" text-anchor="middle" class="small">restricted services</text>
+  <path d="M450 265 L245 265 L245 340" class="line"/>
+  <path d="M750 265 L955 265 L955 340" class="line"/>
+  <path d="M600 305 L600 355" class="line"/>
 
-  <rect x="630" y="285" width="240" height="120" class="done"/>
-  <text x="750" y="325" text-anchor="middle" class="label">Printer Zone</text>
-  <text x="750" y="357" text-anchor="middle" class="status">PASS</text>
-  <text x="750" y="382" text-anchor="middle" class="small">print protocols only</text>
+  <rect x="95" y="340" width="300" height="105" class="done"/>
+  <text x="245" y="372" text-anchor="middle" class="label">Management Zone</text>
+  <text x="245" y="399" text-anchor="middle" class="status">OPERATIONAL</text>
+  <text x="245" y="424" text-anchor="middle" class="small">Privileged workstation + MFA admin paths</text>
 
-  <rect x="910" y="285" width="240" height="120" class="done"/>
-  <text x="1030" y="325" text-anchor="middle" class="label">Storage Zone</text>
-  <text x="1030" y="357" text-anchor="middle" class="status">PASS</text>
-  <text x="1030" y="382" text-anchor="middle" class="small">approved SMB clients</text>
+  <rect x="805" y="340" width="300" height="105" class="done"/>
+  <text x="955" y="372" text-anchor="middle" class="label">IoT / OT Zone</text>
+  <text x="955" y="399" text-anchor="middle" class="status">VALIDATED</text>
+  <text x="955" y="424" text-anchor="middle" class="small">Isolated gateway + telemetry continuity</text>
 
-  <rect x="465" y="500" width="270" height="120" class="next"/>
-  <text x="600" y="542" text-anchor="middle" class="label">Management Zone</text>
-  <text x="600" y="574" text-anchor="middle" class="statusnext">NEXT</text>
-  <text x="600" y="600" text-anchor="middle" class="small">privileged admin plane</text>
+  <rect x="450" y="355" width="300" height="105" class="done"/>
+  <text x="600" y="387" text-anchor="middle" class="label">Cisco Access / Lab Switch</text>
+  <text x="600" y="414" text-anchor="middle" class="status">INTEGRATED</text>
+  <text x="600" y="436" text-anchor="middle" class="small">802.1Q trunk validated</text>
+  <text x="600" y="454" text-anchor="middle" class="small">for management + server paths</text>
 
-  <path d="M600 205 L600 245 L190 245 L190 285" class="line"/>
-  <path d="M600 245 L470 245 L470 285" class="line"/>
-  <path d="M600 245 L750 245 L750 285" class="line"/>
-  <path d="M600 245 L1030 245 L1030 285" class="line"/>
-  <path d="M600 205 L600 500" class="line"/>
+  <path d="M600 460 L600 505" class="line"/>
+  <text x="618" y="490" class="tag">native management · tagged workloads</text>
 
-  <text x="600" y="665" text-anchor="middle" class="small">Sanitized public diagram — internal addressing, hostnames, credentials, and device identifiers intentionally omitted.</text>
+  <path d="M600 505 L173 505 L173 545" class="line"/>
+  <path d="M600 505 L453 505 L453 545" class="line"/>
+  <path d="M600 505 L733 505 L733 545" class="line"/>
+  <path d="M600 505 L1013 505 L1013 545" class="line"/>
+
+  <rect x="50" y="545" width="245" height="105" class="done"/>
+  <text x="173" y="577" text-anchor="middle" class="label">Server Zone</text>
+  <text x="173" y="604" text-anchor="middle" class="status">VALIDATED</text>
+  <text x="173" y="625" text-anchor="middle" class="small">DHCP · routing · DNS</text>
+  <text x="173" y="644" text-anchor="middle" class="small">Internet · management isolation</text>
+
+  <rect x="330" y="545" width="245" height="105" class="done"/>
+  <text x="453" y="577" text-anchor="middle" class="label">Storage Zone</text>
+  <text x="453" y="604" text-anchor="middle" class="status">OPERATIONAL</text>
+  <text x="453" y="625" text-anchor="middle" class="small">Protected SMB operational</text>
+  <text x="453" y="644" text-anchor="middle" class="small">Cisco-side endpoint test pending</text>
+
+  <rect x="610" y="545" width="245" height="105" class="done"/>
+  <text x="733" y="577" text-anchor="middle" class="label">Printer Zone</text>
+  <text x="733" y="604" text-anchor="middle" class="status">VALIDATED</text>
+  <text x="733" y="625" text-anchor="middle" class="small">Service-specific access</text>
+  <text x="733" y="644" text-anchor="middle" class="small">administration isolated</text>
+
+  <rect x="890" y="545" width="245" height="105" class="pending"/>
+  <text x="1013" y="577" text-anchor="middle" class="label">Lab Zone</text>
+  <text x="1013" y="604" text-anchor="middle" class="statusp">FOUNDATION READY</text>
+  <text x="1013" y="625" text-anchor="middle" class="small">Tagged on trunk</text>
+  <text x="1013" y="644" text-anchor="middle" class="small">endpoint validation pending</text>
+
+  <rect x="245" y="682" width="710" height="58" class="core"/>
+  <text x="600" y="706" text-anchor="middle" class="small">Next: validate storage + lab endpoints across the Cisco trunk</text>
+  <text x="600" y="727" text-anchor="middle" class="small">then advance server / virtualization architecture</text>
 </svg>
