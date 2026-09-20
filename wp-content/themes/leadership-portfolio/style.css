@@ -978,3 +978,683 @@ body.page-id-8 .contact-actions .btn.secondary:visited{
     aspect-ratio:16 / 9;
   }
 }
+
+/* =========================================================
+   Network Lab Enterprise Build Roadmap v0.5.1
+   Uses canonical Network Lab typography
+   ========================================================= */
+
+.case-content .network-lab-case .enterprise-roadmap-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 18px 0 24px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    margin: 0 !important;
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table th,
+.case-content .network-lab-case .enterprise-roadmap-table td {
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table th {
+    background: #f5f8fc;
+    color: var(--navy);
+    font-weight: 800 !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table td:first-child {
+    white-space: nowrap;
+    color: var(--navy);
+    font-weight: 800 !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table td:last-child {
+    white-space: nowrap;
+    font-weight: 700 !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.case-content .network-lab-case .roadmap-note {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    margin-top: 12px !important;
+}
+
+@media (max-width: 650px) {
+    .case-content .network-lab-case .enterprise-roadmap-table {
+        min-width: 680px;
+    }
+}
+
+/* MaigaTech Network Lab — roadmap design refinement v0.5.1
+   Append to the active theme stylesheet after the existing network-lab rules. */
+
+.case-content .network-lab-case .enterprise-roadmap-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 28px;
+  align-items: start;
+  margin-top: 22px;
+}
+
+/* Option A: one restrained light-grey panel behind the entire roadmap. */
+.case-content .network-lab-case .enterprise-roadmap-panel {
+  background: #f6f8fb;
+  border: 1px solid #e1e7ee;
+  border-radius: 16px;
+  padding: 24px 26px 26px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table-wrap {
+  overflow-x: auto;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  background: transparent;
+  font-size: 0.95rem;
+  line-height: 1.42;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table th {
+  padding: 0 10px 10px;
+  text-align: left;
+  color: #0f2238;
+  font-weight: 800;
+  border-bottom: 1px solid #d9e1ea;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table td {
+  padding: 5px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(217, 225, 234, 0.52);
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table th:first-child,
+.case-content .network-lab-case .enterprise-roadmap-table td:first-child {
+  width: 88px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table th:last-child,
+.case-content .network-lab-case .enterprise-roadmap-table td:last-child {
+  width: 150px;
+  white-space: nowrap;
+}
+
+.case-content .network-lab-case .roadmap-status {
+  font-weight: 700;
+}
+
+.case-content .network-lab-case .roadmap-status-complete,
+.case-content .network-lab-case .roadmap-status-operational {
+  color: #245c45;
+}
+
+.case-content .network-lab-case .roadmap-status-progress {
+  color: #7a5a18;
+}
+
+.case-content .network-lab-case .roadmap-status-planned {
+  color: #536579;
+  font-weight: 600;
+}
+
+/* Match the visual breathing room above the roadmap table. */
+.case-content .network-lab-case .roadmap-current-position {
+  margin: 22px 0 0 !important;
+  padding: 0 !important;
+  line-height: 1.65;
+}
+
+.case-content .network-lab-case .enterprise-technology-card {
+  background: #f1f5f9;
+  border: 1px solid #d8e1eb;
+  border-radius: 16px;
+  padding: 20px 18px;
+  position: sticky;
+  top: 24px;
+}
+
+.case-content .network-lab-case .enterprise-technology-card h3 {
+  margin: 0 0 14px !important;
+  font-size: 1.08rem !important;
+  line-height: 1.3 !important;
+  font-weight: 800 !important;
+}
+
+.case-content .network-lab-case .enterprise-technology-card h4 {
+  margin: 16px 0 6px !important;
+  font-size: 0.79rem !important;
+  line-height: 1.25 !important;
+  font-weight: 800 !important;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+  color: #41566e;
+}
+
+.case-content .network-lab-case .enterprise-technology-card ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.case-content .network-lab-case .enterprise-technology-card li {
+  margin: 0 0 5px !important;
+  padding: 0 !important;
+  font-size: 0.82rem !important;
+  line-height: 1.35 !important;
+  color: #50657c;
+}
+
+.case-content .network-lab-case .enterprise-technology-card em {
+  font-size: .76rem;
+  color: #728196;
+}
+
+.case-content .network-lab-case .screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 980px) {
+  .case-content .network-lab-case .enterprise-roadmap-shell {
+    grid-template-columns: 1fr;
+  }
+  .case-content .network-lab-case .enterprise-technology-card {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .case-content .network-lab-case .enterprise-roadmap-panel {
+    padding: 18px 14px 20px;
+  }
+  .case-content .network-lab-case .enterprise-roadmap-table {
+    min-width: 690px;
+  }
+}
+
+/* =========================================================
+   Network Lab v0.5.1 Design Refinement - MaigaTech Canonical
+   Preserve established Network Lab typography
+   ========================================================= */
+
+/*
+   Neutralize the earlier standalone roadmap wrapper styling.
+   The refined design now owns the visual panel.
+*/
+.case-content .network-lab-case .enterprise-roadmap-table-wrap {
+    width: auto !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Canonical Network Lab reading size */
+.case-content .network-lab-case .enterprise-roadmap-table,
+.case-content .network-lab-case .enterprise-roadmap-table th,
+.case-content .network-lab-case .enterprise-roadmap-table td {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+}
+
+/* Keep the conclusion aligned with normal case-study copy */
+.case-content .network-lab-case .roadmap-current-position {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+}
+
+/* Technology card: retain hierarchy without shrinking the page */
+.case-content .network-lab-case .enterprise-technology-card h3 {
+    font-family: inherit !important;
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    font-weight: 800 !important;
+}
+
+.case-content .network-lab-case .enterprise-technology-card h4 {
+    font-family: inherit !important;
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+    font-weight: 800 !important;
+}
+
+.case-content .network-lab-case .enterprise-technology-card li {
+    font-family: inherit !important;
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+}
+
+.case-content .network-lab-case .enterprise-technology-card em {
+    font-family: inherit !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+}
+
+/* Roadmap status wording remains compact but readable */
+.case-content .network-lab-case .roadmap-status {
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+/* Preserve the established major-heading scale */
+.case-content .network-lab-case > h2 {
+    font-size: 32px !important;
+    line-height: 1.18 !important;
+    font-weight: 800 !important;
+}
+
+/* Preserve established CHG heading scale */
+.case-content .network-lab-case .network-change-heading {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    font-weight: 800 !important;
+}
+
+/* =========================================================
+   Network Lab Roadmap Two-Column Layout Correction v2
+   Final local layout
+   ========================================================= */
+
+/* One unified Roadmap + Technology section */
+.enterprise-roadmap-shell {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 260px !important;
+    column-gap: 28px !important;
+    row-gap: 0 !important;
+    align-items: start !important;
+    width: 100% !important;
+    margin: 32px 0 30px !important;
+}
+
+.enterprise-roadmap-main {
+    grid-column: 1 !important;
+    min-width: 0 !important;
+}
+
+.enterprise-technology-card {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    align-self: start !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    position: static !important;
+}
+
+/* Canonical roadmap heading */
+.enterprise-roadmap-main > h2 {
+    font-family: inherit !important;
+    font-size: 32px !important;
+    line-height: 1.18 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    color: var(--navy) !important;
+    margin: 0 0 14px !important;
+}
+
+/* Canonical introduction */
+.enterprise-roadmap-main > p:not(.roadmap-current-position) {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    margin: 0 0 20px !important;
+}
+
+/* Very light enterprise-document panel */
+.enterprise-roadmap-panel {
+    background: #f7f8fa !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 22px !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+.enterprise-roadmap-table-wrap {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: auto !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.enterprise-roadmap-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: transparent !important;
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+}
+
+.enterprise-roadmap-table th {
+    padding: 0 10px 11px !important;
+    background: transparent !important;
+    border-bottom: 1px solid #d9e1ea !important;
+    text-align: left !important;
+    font-family: inherit !important;
+    font-size: 17px !important;
+    font-weight: 800 !important;
+    color: var(--navy) !important;
+}
+
+.enterprise-roadmap-table td {
+    padding: 6px 10px !important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(217,225,234,.48) !important;
+    vertical-align: top !important;
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+}
+
+.enterprise-roadmap-table tbody tr,
+.enterprise-roadmap-table tbody tr:hover {
+    background: transparent !important;
+}
+
+.enterprise-roadmap-table tbody tr:last-child td {
+    border-bottom: 0 !important;
+}
+
+.enterprise-roadmap-table th:first-child,
+.enterprise-roadmap-table td:first-child {
+    width: 88px !important;
+    white-space: nowrap !important;
+    font-weight: 800 !important;
+}
+
+.enterprise-roadmap-table th:last-child,
+.enterprise-roadmap-table td:last-child {
+    width: 150px !important;
+    white-space: nowrap !important;
+}
+
+/* Breathing room below CHG-025 */
+.roadmap-current-position {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    margin: 24px 0 0 !important;
+    padding: 0 !important;
+}
+
+/* Executive Technology sidebar */
+.enterprise-technology-card {
+    padding: 20px 18px !important;
+    background: #f1f5f9 !important;
+    border: 1px solid #d8e1eb !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+}
+
+.enterprise-technology-card h3 {
+    margin: 0 0 14px !important;
+    font-family: inherit !important;
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    font-weight: 800 !important;
+    color: var(--navy) !important;
+}
+
+.enterprise-technology-card h4 {
+    margin: 16px 0 7px !important;
+    font-family: inherit !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    font-weight: 800 !important;
+    letter-spacing: .045em !important;
+    text-transform: uppercase !important;
+    color: #41566e !important;
+}
+
+.enterprise-technology-card ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.enterprise-technology-card li {
+    margin: 0 0 5px !important;
+    padding: 0 !important;
+    font-family: inherit !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    color: #50657c !important;
+}
+
+.enterprise-technology-card em {
+    font-family: inherit !important;
+    font-size: 13px !important;
+    color: #728196 !important;
+}
+
+/*
+   Only genuinely narrow screens stack.
+   Desktop and normal tablet widths remain side-by-side.
+*/
+@media (max-width: 700px) {
+
+    .enterprise-roadmap-shell {
+        grid-template-columns: 1fr !important;
+        row-gap: 24px !important;
+    }
+
+    .enterprise-roadmap-main {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+    }
+
+    .enterprise-technology-card {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+    }
+
+    .enterprise-roadmap-panel {
+        padding: 18px 14px !important;
+    }
+
+    .enterprise-roadmap-table {
+        min-width: 690px !important;
+    }
+}
+
+/* =========================================================
+   Network Lab Roadmap Main-Column Placement v3
+   Roadmap uses full existing case-content width.
+   Existing case-side remains the Technology sidebar.
+   ========================================================= */
+
+.case-content .network-lab-case .enterprise-roadmap-section {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 30px 0 34px !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-section > h2 {
+    font-family: inherit !important;
+    font-size: 32px !important;
+    line-height: 1.18 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    color: var(--navy) !important;
+    margin: 0 0 14px !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-section > p:not(.roadmap-current-position) {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    margin: 0 0 20px !important;
+}
+
+/* Light-grey table panel only */
+.case-content .network-lab-case .enterprise-roadmap-panel {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    background: #f7f8fa !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 22px !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table-wrap {
+    width: 100% !important;
+    max-width: none !important;
+    overflow-x: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: auto !important;
+    border-collapse: collapse !important;
+    background: transparent !important;
+    margin: 0 !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table th,
+.case-content .network-lab-case .enterprise-roadmap-table td {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table th {
+    padding: 0 10px 11px !important;
+    background: transparent !important;
+    border-bottom: 1px solid #d9e1ea !important;
+    text-align: left !important;
+    font-weight: 800 !important;
+    color: var(--navy) !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table td {
+    padding: 6px 10px !important;
+    vertical-align: top !important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(217,225,234,.48) !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table tbody tr,
+.case-content .network-lab-case .enterprise-roadmap-table tbody tr:hover {
+    background: transparent !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table tbody tr:last-child td {
+    border-bottom: 0 !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table th:first-child,
+.case-content .network-lab-case .enterprise-roadmap-table td:first-child {
+    width: 90px !important;
+    white-space: nowrap !important;
+    font-weight: 800 !important;
+}
+
+.case-content .network-lab-case .enterprise-roadmap-table th:last-child,
+.case-content .network-lab-case .enterprise-roadmap-table td:last-child {
+    width: 155px !important;
+}
+
+/* Required breathing room below CHG-025 */
+.case-content .network-lab-case .roadmap-current-position {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    margin: 24px 0 0 !important;
+    padding: 0 !important;
+}
+
+/* Small screens may scroll the table if needed */
+@media (max-width: 650px) {
+    .case-content .network-lab-case .enterprise-roadmap-panel {
+        padding: 18px 14px !important;
+    }
+
+    .case-content .network-lab-case .enterprise-roadmap-table-wrap {
+        overflow-x: auto !important;
+    }
+
+    .case-content .network-lab-case .enterprise-roadmap-table {
+        min-width: 690px !important;
+    }
+}
+
+/* =========================================================
+   Network Lab Existing Technology Sidebar Grouping v1
+   Uses the site's original case-side card.
+   ========================================================= */
+
+body.postid-57 .case-side p {
+    margin: 0 0 16px !important;
+    color: var(--muted);
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+}
+
+body.postid-57 .case-side p:last-child {
+    margin-bottom: 0 !important;
+}
+
+body.postid-57 .case-side p::first-line {
+    color: var(--navy);
+    font-weight: 800;
+}

@@ -99,6 +99,151 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>The work is intentionally sequenced rather than performed as a single redesign. Each change captures current state, prepares the target service path, validates business functionality, and preserves a rollback option before the next dependency is moved.</p>
 <h2>Business &amp; Architecture Problem</h2>
 <p>The original environment functioned, but several unrelated device classes shared the same user network. That design increased east-west trust, mixed administrative and business traffic, and made it difficult to apply least-privilege policy. The modernization program therefore focuses on service continuity while reducing implicit trust and improving operational control.</p>
+<section class="enterprise-roadmap-section">
+<h2>Enterprise Build Roadmap</h2>
+<p>This case study is part of a staged enterprise-modernization program rather than a collection of isolated lab tasks. The roadmap below shows the change sequence from the initial network remediation through compute, identity, endpoint management, monitoring, resilience, and final enterprise acceptance.</p>
+<section class="enterprise-roadmap-panel" aria-labelledby="enterprise-roadmap-table-title">
+<h3 id="enterprise-roadmap-table-title" class="screen-reader-text">Enterprise build change roadmap</h3>
+<div class="enterprise-roadmap-table-wrap">
+<table class="enterprise-roadmap-table">
+<thead>
+<tr>
+<th scope="col">Change</th>
+<th scope="col">Workstream</th>
+<th scope="col">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHG-001</td>
+<td>DHCP gateway remediation</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-002</td>
+<td>WAN administrative-access hardening</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-003</td>
+<td>Named MFA-protected administrator</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-004</td>
+<td>Break-glass administrative access</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-005</td>
+<td>Privileged-account cleanup</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-006</td>
+<td>Logging baseline</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-007</td>
+<td>DNS path correction</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-008</td>
+<td>User-network management-plane hardening</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-009</td>
+<td>IoT segmentation &amp; telemetry continuity</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-010</td>
+<td>Infrastructure address stabilization</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-011</td>
+<td>Printer security-zone segmentation</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-012</td>
+<td>Protected-storage segmentation</td>
+<td><span class="roadmap-status roadmap-status-complete">Complete</span></td>
+</tr>
+<tr>
+<td>CHG-013</td>
+<td>Dedicated management VLAN</td>
+<td><span class="roadmap-status roadmap-status-operational">Operational</span></td>
+</tr>
+<tr>
+<td>CHG-014</td>
+<td>Network segmentation + Cisco 802.1Q trunk</td>
+<td><span class="roadmap-status roadmap-status-progress">Closeout in progress</span></td>
+</tr>
+<tr>
+<td>CHG-015</td>
+<td>Compute / virtualization / QNAP platform</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-016</td>
+<td>Windows Server + Active Directory</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-017</td>
+<td>Microsoft Entra ID / hybrid identity</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-018</td>
+<td>Intune endpoint management</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-019</td>
+<td>BYOD / MAM / Conditional Access</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-020</td>
+<td>Endpoint security baseline</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-021</td>
+<td>Guest + wireless segmentation</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-022</td>
+<td>Central monitoring / logging</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-023</td>
+<td>Backup / recovery / UPS / restore testing</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-024</td>
+<td>Least-privilege firewall cleanup</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>CHG-025</td>
+<td>Enterprise acceptance &amp; disaster-recovery exercise</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<p class="roadmap-current-position"><strong>Current position:</strong> CHG-014 is being closed out. Management and server paths are validated across the Cisco/Fortinet trunk; storage and lab endpoint validation remain before the program moves into CHG-015 compute and virtualization.</p>
+</section>
 <h2>Target Architecture</h2>
 <p>The target architecture separates management, servers, protected storage, users, IoT/OT, printers, guests, and lab/testing systems. Inter-zone access is explicitly governed by business need instead of broad network adjacency. The physical design now also includes a secondary Cisco managed switch connected to the primary switching layer through an 802.1Q trunk.</p>
 <figure>
@@ -203,19 +348,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li><strong>Validate at multiple layers:</strong> link state, VLAN assignment, routing, transport, authentication, service behavior, and application outcomes are tested independently.</li>
 <li><strong>Document licensing reality:</strong> expired subscription-backed security services are not represented as active protection.</li>
 </ul>
-<h2>Enterprise Infrastructure Roadmap</h2>
-<p>The segmentation foundation is operational but the broader Enterprise Infrastructure Baseline v1.0 is still being built. The next phases include:</p>
-<ul>
-<li>Complete storage and lab VLAN endpoint validation across the Cisco trunk.</li>
-<li>Server and virtualization architecture.</li>
-<li>Identity and access architecture.</li>
-<li>Endpoint management using MDM and MAM.</li>
-<li>Endpoint security, compliance, encryption, and patching.</li>
-<li>Guest/wireless segmentation and access design.</li>
-<li>Centralized logging, monitoring, alerting, and configuration backup.</li>
-<li>Storage protection, backup, and restore testing.</li>
-<li>Firewall-policy optimization and final operational validation.</li>
-</ul>
 <h2>Leadership Perspective</h2>
 <p>The objective is not simply to configure individual devices. The work demonstrates architecture sequencing, risk reduction, service continuity, change governance, fault isolation, documentation, and the ability to move between business requirements and hands-on implementation. The environment is being built as a governed platform in which network, endpoint, server, and IoT/OT capabilities can be introduced without returning to broad implicit trust.</p>
 <h2>Public Disclosure</h2>
@@ -224,15 +356,30 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>CHG-014 closeout:</strong> complete Cisco-side endpoint validation for the storage and lab VLANs, confirm the final trunk membership is intentionally minimal, and then continue into the server/virtualization phase of the enterprise baseline.</p>
 </div>
 </article>
-<aside class="case-side"><h3>Technology</h3><p>FortiGate 60F<br />
+<aside class="case-side"><h3>Technology</h3><p>Core Network<br />
+FortiGate 60F<br />
 FortiSwitch 124F-FPOE<br />
-Cisco Business Switching<br />
-802.1Q VLANs<br />
+Cisco CBS220-24T-4G<br />
+802.1Q VLANs / trunking<br />
 FortiLink / LACP<br />
 DHCP / DNS / NAT<br />
 SD-WAN foundation<br />
-Windows / macOS<br />
+<br />
+Compute &amp; Storage<br />
+QNAP TS-464 (next phase)<br />
+2 × WD Red Plus 8 TB (next phase)<br />
+Buffalo TeraStation<br />
 Docker<br />
+<br />
+Endpoints &amp; Mobile<br />
+Windows endpoints<br />
+MacBook Pro / macOS<br />
+iPad Pro / iPadOS<br />
+Motorola Android<br />
+TP-Link Wi-Fi 7 AP<br />
+<br />
+IoT &amp; Messaging<br />
+SenseCAP M2<br />
 MQTT<br />
 LoRaWAN / IoT</p></aside></div></section>
 <section class="section"><div class="wrap"><a class="btn ink" href="/projects/">← Back to Projects</a></div></section>
