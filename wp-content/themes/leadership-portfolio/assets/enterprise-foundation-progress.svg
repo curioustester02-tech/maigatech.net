@@ -17,7 +17,7 @@
     </style>
   </defs>
   <rect width="1200" height="760" class="bg"/>
-  <text x="600" y="48" text-anchor="middle" class="title">Network Segmentation Foundation — v0.5</text>
+  <text x="600" y="48" text-anchor="middle" class="title">Network Segmentation Foundation</text>
   <text x="600" y="76" text-anchor="middle" class="small">Sanitized current-state progress</text>
 
   <rect x="470" y="105" width="260" height="80" class="core"/>
