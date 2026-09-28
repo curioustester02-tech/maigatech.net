@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
   <title id="title">Enterprise segmentation foundation progress</title>
-  <desc id="desc">Sanitized architecture showing an enterprise firewall and primary managed switch with operational management, IoT, printer, storage and server zones. A secondary managed switch is connected by an 802.1Q trunk. Storage and lab endpoint validation across the secondary switch remains in progress.</desc>
+  <desc id="desc">Sanitized architecture showing a validated segmented enterprise foundation. Management, server, storage, printer, IoT and lab service paths have been accepted across the multi-switch architecture. CHG-014 is closed and CHG-015 compute and virtualization work is next.</desc>
   <defs>
     <style>
       .bg{fill:#f8fafc}
@@ -35,7 +35,7 @@
 
   <rect x="95" y="340" width="300" height="105" class="done"/>
   <text x="245" y="372" text-anchor="middle" class="label">Management Zone</text>
-  <text x="245" y="399" text-anchor="middle" class="status">OPERATIONAL</text>
+  <text x="245" y="399" text-anchor="middle" class="status">VALIDATED</text>
   <text x="245" y="424" text-anchor="middle" class="small">Privileged workstation + MFA admin paths</text>
 
   <rect x="805" y="340" width="300" height="105" class="done"/>
@@ -45,9 +45,9 @@
 
   <rect x="450" y="355" width="300" height="105" class="done"/>
   <text x="600" y="387" text-anchor="middle" class="label">Cisco Access / Lab Switch</text>
-  <text x="600" y="414" text-anchor="middle" class="status">INTEGRATED</text>
-  <text x="600" y="436" text-anchor="middle" class="small">802.1Q trunk validated</text>
-  <text x="600" y="454" text-anchor="middle" class="small">for management + server paths</text>
+  <text x="600" y="414" text-anchor="middle" class="status">VALIDATED</text>
+  <text x="600" y="436" text-anchor="middle" class="small">802.1Q trunk accepted</text>
+  <text x="600" y="454" text-anchor="middle" class="small">management · server · storage · lab</text>
 
   <path d="M600 460 L600 505" class="line"/>
   <text x="618" y="490" class="tag">native management · tagged workloads</text>
@@ -65,9 +65,9 @@
 
   <rect x="330" y="545" width="245" height="105" class="done"/>
   <text x="453" y="577" text-anchor="middle" class="label">Storage Zone</text>
-  <text x="453" y="604" text-anchor="middle" class="status">OPERATIONAL</text>
-  <text x="453" y="625" text-anchor="middle" class="small">Protected SMB operational</text>
-  <text x="453" y="644" text-anchor="middle" class="small">Cisco-side endpoint test pending</text>
+  <text x="453" y="604" text-anchor="middle" class="status">VALIDATED</text>
+  <text x="453" y="625" text-anchor="middle" class="small">Protected SMB validated</text>
+  <text x="453" y="644" text-anchor="middle" class="small">Trunk service path accepted</text>
 
   <rect x="610" y="545" width="245" height="105" class="done"/>
   <text x="733" y="577" text-anchor="middle" class="label">Printer Zone</text>
@@ -75,13 +75,13 @@
   <text x="733" y="625" text-anchor="middle" class="small">Service-specific access</text>
   <text x="733" y="644" text-anchor="middle" class="small">administration isolated</text>
 
-  <rect x="890" y="545" width="245" height="105" class="pending"/>
+  <rect x="890" y="545" width="245" height="105" class="done"/>
   <text x="1013" y="577" text-anchor="middle" class="label">Lab Zone</text>
-  <text x="1013" y="604" text-anchor="middle" class="statusp">FOUNDATION READY</text>
-  <text x="1013" y="625" text-anchor="middle" class="small">Tagged on trunk</text>
-  <text x="1013" y="644" text-anchor="middle" class="small">endpoint validation pending</text>
+  <text x="1013" y="604" text-anchor="middle" class="status">VALIDATED</text>
+  <text x="1013" y="625" text-anchor="middle" class="small">Tagged trunk path accepted</text>
+  <text x="1013" y="644" text-anchor="middle" class="small">Endpoint validation complete</text>
 
   <rect x="245" y="682" width="710" height="58" class="core"/>
-  <text x="600" y="706" text-anchor="middle" class="small">Next: validate storage + lab endpoints across the Cisco trunk</text>
-  <text x="600" y="727" text-anchor="middle" class="small">then advance server / virtualization architecture</text>
+  <text x="600" y="706" text-anchor="middle" class="small">CHG-014 PASS · multi-switch acceptance complete</text>
+  <text x="600" y="727" text-anchor="middle" class="small">Next: CHG-015 compute / virtualization / QNAP platform</text>
 </svg>

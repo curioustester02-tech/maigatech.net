@@ -182,12 +182,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <tr>
 <td>CHG-014</td>
 <td>Network segmentation + Cisco 802.1Q trunk</td>
-<td><span class="roadmap-status roadmap-status-progress">Closeout in progress</span></td>
+<td><span class="roadmap-status roadmap-status-complete">PASS</span></td>
 </tr>
 <tr>
 <td>CHG-015</td>
 <td>Compute / virtualization / QNAP platform</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+<td><span class="roadmap-status roadmap-status-next">Next</span></td>
 </tr>
 <tr>
 <td>CHG-016</td>
@@ -242,16 +242,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </tbody>
 </table></div>
 </section>
-<p class="roadmap-current-position"><strong>Current position:</strong> CHG-014 is being closed out. Management and server paths are validated across the Cisco/Fortinet trunk; storage and lab endpoint validation remain before the program moves into CHG-015 compute and virtualization.</p>
+<p class="roadmap-current-position"><strong>Current position:</strong> CHG-014 has passed final acceptance. QNAP hardware and two NAS drives have been received, but CHG-015 deployment has not started.</p>
 </section>
 <h2>Target Architecture</h2>
 <p>The target architecture separates management, servers, protected storage, users, IoT/OT, printers, guests, and lab/testing systems. Inter-zone access is explicitly governed by business need instead of broad network adjacency. The physical design now also includes a secondary Cisco managed switch connected to the primary switching layer through an 802.1Q trunk.</p>
 <figure>
   <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/network-lab-architecture.svg" alt="Sanitized target-state enterprise network architecture diagram"><figcaption>Sanitized target-state architecture. Production identifiers, addressing, credentials, account data, and implementation-specific secrets are intentionally withheld.</figcaption></figure>
 <h2>Network Segmentation Foundation — Current Progress</h2>
-<p>The implementation has advanced beyond workload isolation into a dedicated privileged-management plane and multi-switch VLAN architecture. Management, IoT, printer, storage, and server zones are operational; Cisco/Fortinet inter-switch trunking has been validated for management and server traffic. Storage and lab VLAN membership is provisioned across the trunk, with endpoint validation still in progress.</p>
+<p>The segmentation foundation now includes a dedicated privileged-management plane and a validated multi-switch VLAN architecture. Management, server, storage, IoT, printer, and lab service paths have been validated through the intended security boundaries. CHG-014 has passed final acceptance after server, storage, and lab acceptance across the Cisco/Fortinet trunk, trunk cleanup, configuration persistence, recovery backups, and real print/scan workflow validation.</p>
 <figure>
-  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/enterprise-foundation-progress.svg" alt="Sanitized enterprise segmentation progress showing management, server, IoT, printer, and storage zones operational with Cisco trunk validation in progress"><figcaption>Current public-safe progress: the dedicated management plane and server segment are validated across the multi-switch architecture; storage and lab endpoint validation across the Cisco trunk remains in progress.</figcaption></figure>
+  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/enterprise-foundation-progress.svg" alt="Sanitized enterprise segmentation progress showing CHG-014 PASS after management, server, storage, lab, printer, and IoT validation across the segmented multi-switch architecture"><figcaption>Current public-safe progress: CHG-014 has passed final acceptance after management, server, storage, and lab validation across the multi-switch architecture. CHG-015 compute, virtualization, and QNAP platform work is next.</figcaption></figure>
 <h2>Security &amp; Operations Remediation</h2>
 <h3 class="network-change-heading">CHG-001 — DHCP Gateway Remediation <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Corrected a stale DHCP gateway configuration and established deterministic routing on the management workstation while preserving Internet access and administrative reachability.</p>
@@ -302,39 +302,66 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li>A separate fallback management endpoint and legacy recovery path were retained during the migration.</li>
 <li>Host firewall, disk encryption, Secure Boot, TPM, forwarding, bridge, and Internet Connection Sharing state were reviewed on the primary management workstation.</li>
 </ul>
-<h3 class="network-change-heading">CHG-014A — Cisco Management Integration <span class="network-status-badge network-status-pass">PASS</span></h3>
-<p>A Cisco managed switch was integrated as a secondary access/lab switch under the dedicated management plane. The switch was first validated through a direct fallback path, then connected to the production switching layer after management reachability was confirmed.</p>
+<h3 class="network-change-heading">CHG-014 — Cisco Integration, 802.1Q Trunk &amp; Workflow Closure <span class="network-status-badge network-status-pass">PASS</span></h3>
+<p>CHG-014 integrated the Cisco secondary switch into the segmented architecture without flattening the environment. The work was intentionally completed in stages: preserve recovery, establish switch management, build and validate the trunk, prove multiple VLANs end-to-end, remove unnecessary trunk membership, save and back up configuration, then validate real print/scan workflows from both management and ordinary user endpoints.</p>
+<h4 class="network-phase-heading">Phase A — Safe Cisco Management Integration</h4>
 <ul>
-<li>Management moved into the dedicated management VLAN.</li>
-<li>Direct fallback management port retained.</li>
-<li>Production management path validated from the privileged workstation.</li>
-<li>VLAN roles aligned across the switching environment for management, servers, storage, and lab/testing.</li>
+<li><strong>014-A1:</strong> inspected the existing Cisco configuration and captured a pre-change backup.</li>
+<li><strong>014-A2:</strong> moved Cisco management into the dedicated management zone while retaining a direct fallback path.</li>
+<li><strong>014-A3:</strong> validated management over the production uplink before trunk conversion.</li>
+<li><strong>014-A4:</strong> aligned management, server, storage and lab VLAN roles in the Cisco VLAN database.</li>
 </ul>
-<h3 class="network-change-heading">CHG-014B — 802.1Q Trunk &amp; Server VLAN Validation <span class="network-status-badge">VALIDATED PATHS</span></h3>
-<p>The Cisco uplink and primary managed-switch port were converted into a matched 802.1Q trunk. The management VLAN remains native/untagged across the link while server, storage, and lab VLANs are carried as tagged traffic.</p>
-<p><strong>Validated for the management and server paths:</strong></p>
+<h4 class="network-phase-heading">Phase B — 802.1Q Trunk &amp; Server/Lab Foundation</h4>
 <ul>
-<li>Management access remained available throughout the trunk conversion.</li>
-<li>A physical Windows endpoint on a Cisco server access port received the intended server-VLAN DHCP configuration.</li>
-<li>A sustained gateway test completed 235 consecutive replies with 0% packet loss.</li>
-<li>Firewall/NAT policy provided Internet access to the server VLAN.</li>
-<li>DNS resolution succeeded through the configured enterprise resolver path.</li>
-<li>The server-segment endpoint could not administer the management-plane switch, while the privileged management workstation retained access.</li>
+<li><strong>014-B1:</strong> built the server VLAN gateway and DHCP scope.</li>
+<li><strong>014-B2:</strong> built the lab VLAN gateway and DHCP scope.</li>
+<li><strong>014-B3:</strong> converted the Cisco uplink to an 802.1Q trunk with management native/untagged and server/storage/lab tagged.</li>
+<li><strong>014-B4:</strong> matched the FortiSwitch uplink to the intended trunk.</li>
+<li><strong>014-B5:</strong> validated a physical server-zone endpoint with DHCP and a 235-packet gateway test at 0% loss.</li>
+<li><strong>014-B6:</strong> validated server-zone Internet/NAT and DNS.</li>
+<li><strong>014-B7:</strong> proved that the server VLAN could not administer the management plane.</li>
 </ul>
-<p><strong>Still in progress:</strong> Cisco-side endpoint validation for the storage and lab VLANs. These are provisioned across the trunk but are not presented as fully validated yet.</p>
+<h4 class="network-phase-heading">Phase C — Trunk Acceptance, Cleanup &amp; Real Workflow Validation</h4>
+<ul>
+<li><strong>014-C1:</strong> restored a temporary staging switch port to its documented default/quarantine baseline.</li>
+<li><strong>014-C2:</strong> validated the storage VLAN across the Cisco trunk using DHCP, gateway reachability and an actual SMB service test.</li>
+<li><strong>014-C3:</strong> validated the lab VLAN and confirmed management HTTPS remained blocked from that zone.</li>
+<li><strong>014-C4:</strong> restored the test port to its normal server access role and repeated the server acceptance tests.</li>
+<li><strong>014-C5:</strong> removed unnecessary default-VLAN membership from the Cisco trunk while preserving management reachability.</li>
+<li><strong>014-C6:</strong> copied running configuration to startup configuration and verified the unsaved-change indicator cleared.</li>
+<li><strong>014-C7/C8:</strong> captured final Cisco and FortiGate post-change backups.</li>
+<li><strong>014-C9:</strong> repeated the final server-zone DHCP/gateway/Internet/isolation acceptance test.</li>
+<li><strong>014-C10:</strong> restored the ASUS lab endpoint to its normal connectivity.</li>
+<li><strong>014-C11:</strong> extended the proven copier scan service to authorized user endpoints without exposing printer administration.</li>
+<li><strong>014-C12:</strong> corrected a clean ASUS printer queue to a stable-IP Standard TCP/IP RAW printing model; new and previously queued jobs physically printed.</li>
+<li><strong>014-C13:</strong> completed a real cross-VLAN scan from the previously unconfigured ASUS.</li>
+<li><strong>014-C14:</strong> removed an obsolete diagnostic UDP scan path from the firewall and Windows host firewall, then repeated physical scans to prove the retained TCP workflow was sufficient.</li>
+</ul>
+<p><strong>Result:</strong> the inter-switch trunk is now frozen as a validated baseline. Management remains isolated, server/storage/lab VLANs have been proven end-to-end, Cisco and FortiGate recovery artifacts are preserved, and authorized user computers can print and scan to the isolated multifunction copier using stable network addressing while administration remains restricted to the management plane.</p>
+<h2>Printer / Scanner Access Model After CHG-014</h2>
+<p>The multifunction copier remains isolated in the printer VLAN. Ordinary user computers receive only the services required for printing, status and PC-initiated scanning, while web administration remains restricted to the management plane.</p>
+<div class="lab-policy">Authorized user computers → Printer VLAN<br />
+  → RAW printing: permitted<br />
+  → IPP / LPR printing: permitted where required<br />
+  → SNMP status: permitted<br />
+  → PC-initiated scanning: permitted<br />
+  → Printer web administration: not exposed to the user VLAN</p>
+<p>Management systems → Printer VLAN<br />
+  → Administrative HTTPS: permitted<br />
+  → Print / status / scan: permitted as required</p></div>
+<p><strong>Discovery note:</strong> automatic broadcast-style discovery was not relied upon across routed VLAN boundaries. The validated deployment pattern uses the copier&#8217;s stable network address. This provides a predictable enterprise configuration and can later be automated through endpoint management rather than weakening segmentation for discovery traffic.</p>
 <h2>Troubleshooting &amp; Fault Isolation</h2>
 <p>The work deliberately separates physical link, VLAN membership, routing, transport, service, authentication, and application evidence. Firewall counters are not treated as proof of application success. For IoT, the path was validated independently through network-server events, packet capture, MQTT publish/subscribe, and application ingestion. For storage, connectivity was separated from authentication and permissions before the NAS was moved.</p>
 <p>During server-VLAN trunk testing, a test workstation briefly had both Wi-Fi and Ethernet active. Rather than treating confusing reachability symptoms as a trunk failure, Wi-Fi was disabled and the Ethernet path was re-tested in isolation. The resulting sustained test completed 235 gateway replies with 0% loss. This reinforced the operating principle of eliminating alternate paths before diagnosing VLAN or routing faults.</p>
 <h2>Change-Control Method</h2>
 <ul>
 <li>Capture current state before every meaningful change.</li>
-<li>Create or preserve a rollback path before moving a dependency.</li>
-<li>Build the destination network and firewall policy before migrating the device.</li>
-<li>Make one controlled infrastructure change at a time.</li>
-<li>Validate both security behavior and business functionality after migration.</li>
-<li>Use a clean single-path test when dual-homed endpoints could obscure results.</li>
-<li>Record failed assumptions and corrections instead of hiding them.</li>
-<li>Separate implemented controls from future-state recommendations.</li>
+<li>Preserve a known-good recovery path during management-plane and trunk changes.</li>
+<li>Make one controlled change at a time and define rollback before implementation.</li>
+<li>Use source-interface evidence and packet capture to prove which path actually carried a test.</li>
+<li>Validate real workflows, not only port reachability: management login, DHCP, DNS, Internet, SMB, physical printing and physical scanning.</li>
+<li>Remove temporary diagnostic rules only after a successful disable-and-retest sequence.</li>
+<li>Save running configuration to startup and capture final backups as explicit acceptance items.</li>
 </ul>
 <h2>Architecture Decisions &amp; Trade-offs</h2>
 <ul>
@@ -352,36 +379,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>The objective is not simply to configure individual devices. The work demonstrates architecture sequencing, risk reduction, service continuity, change governance, fault isolation, documentation, and the ability to move between business requirements and hands-on implementation. The environment is being built as a governed platform in which network, endpoint, server, and IoT/OT capabilities can be introduced without returning to broad implicit trust.</p>
 <h2>Public Disclosure</h2>
 <p>This case study intentionally sanitizes infrastructure evidence. Exact addressing, hostnames, MAC addresses, serial numbers, account names, credentials, SSIDs, security tokens, NAS share names, radio identifiers, tenant/application IDs, and screenshots containing sensitive administrative data are withheld or redacted.</p>
-<h2>Next Milestone</h2>
-<p><strong>CHG-014 closeout:</strong> complete Cisco-side endpoint validation for the storage and lab VLANs, confirm the final trunk membership is intentionally minimal, and then continue into the server/virtualization phase of the enterprise baseline.</p>
+<h2>Next Milestone — CHG-015</h2>
+<p>The next phase will establish the QNAP platform as a controlled compute, storage and application foundation. Hardware has been received, but no drives have been installed and no QNAP services are being represented as operational yet. The phase will begin with physical inspection and inventory before any power-on or storage configuration.</p>
 </div>
 </article>
-<aside class="case-side"><h3>Technology</h3><p>Core Network<br />
-FortiGate 60F<br />
-FortiSwitch 124F-FPOE<br />
-Cisco CBS220-24T-4G<br />
-802.1Q VLANs / trunking<br />
-FortiLink / LACP<br />
-DHCP / DNS / NAT<br />
-SD-WAN foundation<br />
-<br />
-Compute &amp; Storage<br />
-QNAP TS-464 (next phase)<br />
-2 × WD Red Plus 8 TB (next phase)<br />
-Buffalo TeraStation<br />
-Docker<br />
-<br />
-Endpoints &amp; Mobile<br />
-Windows endpoints<br />
-MacBook Pro / macOS<br />
-iPad Pro / iPadOS<br />
-Motorola Android<br />
-TP-Link Wi-Fi 7 AP<br />
-<br />
-IoT &amp; Messaging<br />
-SenseCAP M2<br />
-MQTT<br />
-LoRaWAN / IoT</p></aside></div></section>
+<aside class="case-side"><h3>Technology</h3><div class="network-tech-groups"><div class="network-tech-group"><strong class="network-tech-heading">Core Network</strong><div class="network-tech-items">FortiGate 60F<br>FortiSwitch 124F-FPOE<br>Cisco CBS220-24T-4G<br>802.1Q VLANs / trunking<br>FortiLink / LACP<br>DHCP / DNS / NAT<br>SD-WAN foundation</div></div><div class="network-tech-group"><strong class="network-tech-heading">Compute &amp; Storage</strong><div class="network-tech-items">QNAP TS-464 (received / CHG-015 next)<br>2 × WD Red Plus 8 TB (received / CHG-015 next)<br>Buffalo TeraStation<br>Docker</div></div><div class="network-tech-group"><strong class="network-tech-heading">Endpoints &amp; Mobile</strong><div class="network-tech-items">Windows endpoints<br>MacBook Pro / macOS<br>iPad Pro / iPadOS<br>Motorola Android<br>TP-Link Wi-Fi 7 AP</div></div><div class="network-tech-group"><strong class="network-tech-heading">IoT &amp; Messaging</strong><div class="network-tech-items">SenseCAP M2<br>MQTT<br>LoRaWAN / IoT</div></div></div></aside></div></section>
 <section class="section"><div class="wrap"><a class="btn ink" href="/projects/">← Back to Projects</a></div></section>
 </main>
 <footer class="footer"><div class="wrap footer-in">

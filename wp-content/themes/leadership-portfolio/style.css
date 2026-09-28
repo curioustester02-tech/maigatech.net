@@ -1658,3 +1658,244 @@ body.postid-57 .case-side p::first-line {
     color: var(--navy);
     font-weight: 800;
 }
+
+/* =========================================================
+   Network Lab CHG-014 Closure and Technology Groups v1
+   ========================================================= */
+
+/* Phase headings inside the detailed CHG-014 closure */
+.network-lab-case .network-phase-heading {
+    font-family: inherit !important;
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+    font-weight: 800 !important;
+    color: var(--navy) !important;
+    margin: 22px 0 8px !important;
+}
+
+/* CHG-015 roadmap state */
+.network-lab-case .roadmap-status-next {
+    display: inline-block;
+    border-radius: 999px;
+    padding: .18rem .5rem;
+    background: #eef4ff;
+    color: #315b96;
+    font-family: inherit;
+    font-size: .82em;
+    font-weight: 800;
+}
+
+/* Keep the package's sanitized policy block aligned with the site */
+.network-lab-case .lab-policy {
+    font-family: inherit !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    white-space: pre-wrap !important;
+    background: #f6f8fb !important;
+    color: #102a43 !important;
+    border: 1px solid #d9e2ec !important;
+    border-left: 4px solid #1f6feb !important;
+    border-radius: 12px !important;
+    padding: 18px 20px !important;
+    margin: 20px 0 !important;
+    overflow-x: auto !important;
+}
+
+/* Network Lab Technology sidebar grouping */
+body.postid-57 .case-side .network-tech-groups {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body.postid-57 .case-side .network-tech-group {
+    margin: 0 0 18px !important;
+    padding: 0 !important;
+}
+
+body.postid-57 .case-side .network-tech-group:last-child {
+    margin-bottom: 0 !important;
+}
+
+body.postid-57 .case-side .network-tech-heading {
+    display: block !important;
+    margin: 0 0 6px !important;
+    padding: 0 !important;
+    color: var(--navy) !important;
+    font-family: inherit !important;
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+    font-weight: 800 !important;
+}
+
+body.postid-57 .case-side .network-tech-items {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--muted) !important;
+    font-family: inherit !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+}
+
+/*
+   Supersede the previous first-line workaround.
+   Group titles now have real semantic <strong> markup.
+*/
+body.postid-57 .case-side p::first-line {
+    color: inherit;
+    font-weight: inherit;
+}
+
+/* =========================================================
+   Network Lab Technology Bold Groups v2
+   ========================================================= */
+
+body.postid-57 .case-side .network-tech-group {
+    margin: 0 0 18px !important;
+}
+
+body.postid-57 .case-side .network-tech-group:last-child {
+    margin-bottom: 0 !important;
+}
+
+body.postid-57 .case-side .network-tech-heading {
+    display: block !important;
+    margin: 0 0 6px !important;
+    color: var(--navy) !important;
+    font-family: inherit !important;
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+    font-weight: 800 !important;
+}
+
+body.postid-57 .case-side .network-tech-items {
+    color: var(--muted) !important;
+    font-family: inherit !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+}
+
+/* =========================================================
+   Expanded Employment and Project Contact Page v1
+   ========================================================= */
+
+.contact-intro {
+    max-width: 920px;
+    margin-bottom: 44px;
+}
+
+.contact-intro h2,
+.contact-services > h2,
+.contact-connect > h2,
+.contact-fit-callout h2 {
+    margin-top: 0;
+}
+
+.contact-lead {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.contact-services {
+    margin-top: 40px;
+}
+
+.contact-scope-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.contact-scope-card {
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+}
+
+.contact-scope-card h3 {
+    margin: 0 0 10px;
+    color: var(--navy);
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+.contact-scope-card p {
+    margin: 0;
+}
+
+.contact-opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin: 46px 0;
+}
+
+.contact-opportunity {
+    padding: 28px;
+    border-radius: 18px;
+    background: #f7f8fa;
+    border: 1px solid var(--line);
+}
+
+.contact-opportunity h2 {
+    margin: 8px 0 14px;
+    font-size: 26px;
+}
+
+.contact-opportunity-label {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--navy);
+}
+
+.contact-fit-callout {
+    margin: 42px 0;
+    padding: 30px;
+    border-left: 4px solid var(--navy);
+    background: #f7f8fa;
+    border-radius: 0 16px 16px 0;
+}
+
+.contact-fit-callout p {
+    margin-bottom: 0;
+}
+
+.contact-connect {
+    margin-top: 44px;
+}
+
+.contact-connect .contact-actions {
+    margin: 22px 0 30px;
+}
+
+.contact-connect .contact-proof {
+    margin-top: 30px;
+}
+
+.contact-proof > div strong {
+    display: block;
+    margin-bottom: 7px;
+}
+
+@media (max-width: 760px) {
+
+    .contact-scope-grid,
+    .contact-opportunity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-scope-card,
+    .contact-opportunity,
+    .contact-fit-callout {
+        padding: 22px;
+    }
+
+    .contact-lead {
+        font-size: 18px;
+    }
+}
