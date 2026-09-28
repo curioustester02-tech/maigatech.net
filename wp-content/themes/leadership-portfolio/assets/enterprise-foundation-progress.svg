@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
   <title id="title">Enterprise segmentation foundation progress</title>
-  <desc id="desc">Sanitized architecture showing a validated segmented enterprise foundation. Management, server, storage, printer, IoT and lab service paths have been accepted across the multi-switch architecture. CHG-014 is closed and CHG-015 compute and virtualization work is next.</desc>
+  <desc id="desc">Sanitized architecture showing a validated segmented enterprise foundation. Management, server, storage, printer, IoT and lab service paths have been accepted across the multi-switch architecture. CHG-014 is complete and CHG-015 compute and virtualization work is next.</desc>
   <defs>
     <style>
       .bg{fill:#f8fafc}
@@ -82,6 +82,6 @@
   <text x="1013" y="644" text-anchor="middle" class="small">Endpoint validation complete</text>
 
   <rect x="245" y="682" width="710" height="58" class="core"/>
-  <text x="600" y="706" text-anchor="middle" class="small">CHG-014 PASS · multi-switch acceptance complete</text>
+  <text x="600" y="706" text-anchor="middle" class="small">CHG-014 COMPLETE · multi-switch acceptance complete</text>
   <text x="600" y="727" text-anchor="middle" class="small">Next: CHG-015 compute / virtualization / QNAP platform</text>
 </svg>
