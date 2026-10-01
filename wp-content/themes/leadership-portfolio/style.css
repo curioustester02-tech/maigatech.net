@@ -1911,3 +1911,89 @@ body.postid-57 .case-side .network-tech-items {
     grid-template-columns:1fr;
   }
 }
+/* MaigaTech v2 Step 7: common flagship case-study executive summary */
+.flagship-exec-summary{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin:0 0 34px;
+}
+.flagship-summary-item{
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--soft);
+}
+.flagship-summary-label{
+  display:block;
+  margin-bottom:8px;
+  color:var(--blue);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.flagship-summary-item p{
+  margin:0;
+}
+.flagship-technical-depth{
+  margin-top:38px;
+  padding-top:32px;
+  border-top:1px solid var(--line);
+}
+.flagship-technical-depth h3{
+  margin-top:24px;
+}
+@media(max-width:650px){
+  .flagship-exec-summary{
+    grid-template-columns:1fr;
+  }
+}
+
+/* MaigaTech CHG-015 architecture diagram */
+.case-content .network-lab-case .network-architecture-intro{
+  font-size:1rem !important;
+  line-height:1.65 !important;
+  margin:0 0 1rem !important;
+}
+.case-content .network-lab-case .network-architecture-figure{
+  margin:1rem 0 1.75rem !important;
+}
+.case-content .network-lab-case .network-architecture-figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+}
+.case-content .network-lab-case .network-architecture-figure figcaption{
+  margin-top:.65rem;
+  color:var(--muted);
+  font-size:.88rem !important;
+  line-height:1.55 !important;
+}
+.case-content .network-lab-case .network-next-milestone{
+  margin:1.75rem 0 0 !important;
+  padding:1.15rem 1.25rem;
+  border:1px solid var(--line);
+  border-left:4px solid #1f6feb;
+  border-radius:12px;
+  background:#f6f8fb;
+}
+.case-content .network-lab-case .network-next-milestone h3{
+  margin:0 0 .6rem !important;
+  font-size:1.08rem !important;
+  line-height:1.4 !important;
+}
+.case-content .network-lab-case .network-next-milestone p,
+.case-content .network-lab-case .network-next-milestone li{
+  font-size:1rem !important;
+  line-height:1.65 !important;
+}
+.case-content .network-lab-case .network-next-milestone p{
+  margin:.25rem 0 .75rem !important;
+}
+.case-content .network-lab-case .network-next-milestone ul{
+  margin:.35rem 0 0 1.2rem !important;
+}

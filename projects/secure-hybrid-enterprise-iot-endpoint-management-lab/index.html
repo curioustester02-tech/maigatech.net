@@ -186,8 +186,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </tr>
 <tr>
 <td>CHG-015</td>
-<td>Compute / virtualization / QNAP platform</td>
-<td><span class="roadmap-status roadmap-status-next">Next</span></td>
+<td>Compute / virtualization / QNAP application platform</td>
+<td><span class="roadmap-status roadmap-status-progress">In Progress</span></td>
 </tr>
 <tr>
 <td>CHG-016</td>
@@ -242,7 +242,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </tbody>
 </table></div>
 </section>
-<p class="roadmap-current-position"><strong>Current position:</strong> CHG-014 has passed final acceptance. QNAP hardware and two NAS drives have been received, but CHG-015 deployment has not started.</p>
+<p class="roadmap-current-position"><strong>Current position:</strong> CHG-014 is formally closed. CHG-015 has completed the storage and local-recovery foundation: RAID1 is healthy, the encrypted thick volume is operational, hardened platform shares are in place, hourly Smart Versioning snapshots are active, and a controlled QNAP-to-Buffalo backup plus Buffalo-to-QNAP restore test has passed. Next: move the backup connection to a least-privilege service account, establish production backup scheduling, validate selected Microsoft OneDrive off-site recovery, then continue into containers, LAB-VM-01 and secure application/web-hosting workloads.</p>
 </section>
 <h2>Target Architecture</h2>
 <p>The target architecture separates management, servers, protected storage, users, IoT/OT, printers, guests, and lab/testing systems. Inter-zone access is explicitly governed by business need instead of broad network adjacency. The physical design now also includes a secondary Cisco managed switch connected to the primary switching layer through an 802.1Q trunk.</p>
@@ -251,7 +251,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Network Segmentation Foundation — Current Progress</h2>
 <p>The segmentation foundation now includes a dedicated privileged-management plane and a validated multi-switch VLAN architecture. Management, server, storage, IoT, printer, and lab service paths have been validated through the intended security boundaries. CHG-014 has passed final acceptance after server, storage, and lab acceptance across the Cisco/Fortinet trunk, trunk cleanup, configuration persistence, recovery backups, and real print/scan workflow validation.</p>
 <figure>
-  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/enterprise-foundation-progress.svg" alt="Sanitized enterprise segmentation progress showing CHG-014 complete after management, server, storage, lab, printer, and IoT validation across the segmented multi-switch architecture"><figcaption>Current public-safe progress: CHG-014 has passed final acceptance after management, server, storage, and lab validation across the multi-switch architecture. CHG-015 compute, virtualization, and QNAP platform work is next.</figcaption></figure>
+  <img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/enterprise-foundation-progress.svg" alt="Sanitized enterprise segmentation progress showing CHG-014 complete after management, server, storage, lab, printer, and IoT validation across the segmented multi-switch architecture"><figcaption>Current public-safe progress: CHG-014 has passed final acceptance after management, server, storage, and lab validation across the multi-switch architecture. CHG-015 compute, virtualization, storage and QNAP application-platform work is now in progress; the storage, snapshot and local recovery foundation has been validated.</figcaption></figure>
 <h2>Security &amp; Operations Remediation</h2>
 <h3 class="network-change-heading">CHG-001 — DHCP Gateway Remediation <span class="network-status-badge network-status-pass">PASS</span></h3>
 <p>Corrected a stale DHCP gateway configuration and established deterministic routing on the management workstation while preserving Internet access and administrative reachability.</p>
@@ -379,11 +379,79 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>The objective is not simply to configure individual devices. The work demonstrates architecture sequencing, risk reduction, service continuity, change governance, fault isolation, documentation, and the ability to move between business requirements and hands-on implementation. The environment is being built as a governed platform in which network, endpoint, server, and IoT/OT capabilities can be introduced without returning to broad implicit trust.</p>
 <h2>Public Disclosure</h2>
 <p>This case study intentionally sanitizes infrastructure evidence. Exact addressing, hostnames, MAC addresses, serial numbers, account names, credentials, SSIDs, security tokens, NAS share names, radio identifiers, tenant/application IDs, and screenshots containing sensitive administrative data are withheld or redacted.</p>
-<h2>Next Milestone — CHG-015</h2>
-<p>The next phase will establish the QNAP platform as a controlled compute, storage and application foundation. Hardware has been received, but no drives have been installed and no QNAP services are being represented as operational yet. The phase will begin with physical inspection and inventory before any power-on or storage configuration.</p>
+<h2>Current Milestone &mdash; CHG-015</h2>
+<p>CHG-015 is now beyond basic NAS commissioning and is operating as a controlled storage, recovery and application-platform build. The RAID1 foundation is healthy; an encrypted thick volume has been created and optimized; platform shares have been hardened; hourly Smart Versioning snapshots are active; and an end-to-end local recovery exercise has validated both the QNAP-to-Buffalo copy path and the Buffalo-to-QNAP restore path. Off-site cloud recovery, containers, virtualization and public application hosting remain planned until separately implemented and validated.</p>
+<h3>Application &amp; Hosting Architecture</h3>
+<p class="network-architecture-intro">The application platform is being built in layers. Secure publishing remains planned, the QNAP application and hosting platform is in progress, and the storage/recovery foundation has already been validated.</p>
+<figure class="network-architecture-figure">
+<img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/application-hosting-architecture.png" alt="Sanitized Application and Hosting Architecture showing the planned secure publishing layer, the QNAP application and hosting platform in progress, planned application workloads, and validated data-protection controls." loading="lazy"><figcaption><strong>Public note:</strong> This is a sanitized public architecture view. Generic workload names are used intentionally, and private infrastructure identifiers are withheld.</figcaption></figure>
+<h3>CHG-015 Validation Record</h3>
+<div class="enterprise-roadmap-table-wrap">
+<table class="enterprise-roadmap-table">
+<thead>
+<tr>
+<th scope="col">Control</th>
+<th scope="col">Validation / Outcome</th>
+<th scope="col">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAID1 &amp; volume</td>
+<td>Two-disk RAID1 synchronized successfully; encrypted thick volume created, optimized and returned to a healthy ready state.</td>
+<td><span class="roadmap-status roadmap-status-complete">PASS</span></td>
+</tr>
+<tr>
+<td>Platform storage model</td>
+<td>Purpose-built application, web-hosting, SaaS-lab and lab-data shares were created with restricted administrative access and hardened browsing/access settings.</td>
+<td><span class="roadmap-status roadmap-status-complete">PASS</span></td>
+</tr>
+<tr>
+<td>Snapshot protection</td>
+<td>A storage baseline snapshot was captured and automated Smart Versioning was enabled with hourly, daily, weekly and monthly retention tiers.</td>
+<td><span class="roadmap-status roadmap-status-complete">PASS</span></td>
+</tr>
+<tr>
+<td>Backup network path</td>
+<td>A least-scope firewall rule permits only the required SMB service between the application platform and the secondary NAS backup target.</td>
+<td><span class="roadmap-status roadmap-status-complete">PASS</span></td>
+</tr>
+<tr>
+<td>Local backup</td>
+<td>A controlled one-way test copied protected data from the QNAP platform into a dedicated secondary-NAS backup location without destination-deletion mirroring.</td>
+<td><span class="roadmap-status roadmap-status-complete">PASS</span></td>
+</tr>
+<tr>
+<td>Recovery exercise</td>
+<td>The secondary copy was restored into a separate QNAP recovery location and the recovered file was verified.</td>
+<td><span class="roadmap-status roadmap-status-complete">PASS</span></td>
+</tr>
+<tr>
+<td>Off-site recovery</td>
+<td>Selected cloud backup with retention/versioning and a real restore test remains the next resilience milestone.</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+<tr>
+<td>Compute &amp; hosting</td>
+<td>Container Station, LAB-VM-01, secure publishing and the Multi-Site Web Hosting Lab remain staged behind the completed storage/recovery foundation.</td>
+<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section class="network-next-milestone" aria-labelledby="network-next-milestone-title">
+<h3 id="network-next-milestone-title">Next Milestone</h3>
+<p>The next CHG-015 work will move from validated local storage and recovery into production-oriented resilience and application-platform services.</p>
+<ul>
+<li>Move the secondary-NAS backup connection to a least-privilege service account.</li>
+<li>Establish the production backup schedule and retention workflow.</li>
+<li>Validate selected Microsoft OneDrive off-site backup and a real restore.</li>
+<li>Continue into Container Station, LAB-VM-01, secure publishing, the Multi-Site Web Hosting Lab, and portfolio website hosting as separate validated milestones.</li>
+</ul>
+</section>
 </div>
 </article>
-<aside class="case-side"><h3>Technology</h3><div class="network-tech-groups"><div class="network-tech-group"><strong class="network-tech-heading">Core Network</strong><div class="network-tech-items">FortiGate 60F<br>FortiSwitch 124F-FPOE<br>Cisco CBS220-24T-4G<br>802.1Q VLANs / trunking<br>FortiLink / LACP<br>DHCP / DNS / NAT<br>SD-WAN foundation</div></div><div class="network-tech-group"><strong class="network-tech-heading">Compute &amp; Storage</strong><div class="network-tech-items">QNAP TS-464 (received / CHG-015 next)<br>2 × WD Red Plus 8 TB (received / CHG-015 next)<br>Buffalo TeraStation<br>Docker</div></div><div class="network-tech-group"><strong class="network-tech-heading">Endpoints &amp; Mobile</strong><div class="network-tech-items">Windows endpoints<br>MacBook Pro / macOS<br>iPad Pro / iPadOS<br>Motorola Android<br>TP-Link Wi-Fi 7 AP</div></div><div class="network-tech-group"><strong class="network-tech-heading">IoT &amp; Messaging</strong><div class="network-tech-items">SenseCAP M2<br>MQTT<br>LoRaWAN / IoT</div></div></div></aside></div></section>
+<aside class="case-side"><h3>Technology</h3><div class="network-tech-groups"><div class="network-tech-group"><strong class="network-tech-heading">Core Network</strong><div class="network-tech-items">FortiGate 60F<br>FortiSwitch 124F-FPOE<br>Cisco CBS220-24T-4G<br>802.1Q VLANs / trunking<br>FortiLink / LACP<br>DHCP / DNS / NAT<br>SD-WAN foundation</div></div><div class="network-tech-group"><strong class="network-tech-heading">Compute &amp; Storage</strong><div class="network-tech-items">QNAP TS-464 application platform<br>2 x WD Red Plus 8 TB in validated RAID1<br>Encrypted 5 TB thick volume<br>Hourly Smart Versioning snapshots<br>Buffalo TeraStation (validated local backup/recovery target)<br>Microsoft OneDrive (planned off-site backup/recovery target)<br>Container Station / Virtualization Station (planned)</div></div><div class="network-tech-group"><strong class="network-tech-heading">Endpoints &amp; Mobile</strong><div class="network-tech-items">Windows endpoints<br>MacBook Pro / macOS<br>iPad Pro / iPadOS<br>Motorola Android<br>TP-Link Wi-Fi 7 AP</div></div><div class="network-tech-group"><strong class="network-tech-heading">IoT &amp; Messaging</strong><div class="network-tech-items">SenseCAP M2<br>MQTT<br>LoRaWAN / IoT</div></div></div></aside></div></section>
 <section class="section"><div class="wrap"><a class="btn ink" href="/projects/">← Back to Projects</a></div></section>
 </main>
 <footer class="footer"><div class="wrap footer-in">
