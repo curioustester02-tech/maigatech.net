@@ -1997,3 +1997,72 @@ body.postid-57 .case-side .network-tech-items {
 .case-content .network-lab-case .network-next-milestone ul{
   margin:.35rem 0 0 1.2rem !important;
 }
+
+/* MaigaTech CHG-015 platform progress 2026-10-02 */
+.case-content .network-lab-case .chg015-platform-progress{
+  margin:2rem 0 0;
+}
+.case-content .network-lab-case .chg015-platform-progress > h2{
+  font-size:1.65rem !important;
+  line-height:1.3 !important;
+  font-weight:700 !important;
+  margin:2rem 0 .75rem !important;
+}
+.case-content .network-lab-case .chg015-platform-progress h3{
+  font-size:1.08rem !important;
+  line-height:1.45 !important;
+  font-weight:700 !important;
+  margin:1.35rem 0 .5rem !important;
+}
+.case-content .network-lab-case .chg015-platform-progress p,
+.case-content .network-lab-case .chg015-platform-progress li{
+  font-size:1rem !important;
+  line-height:1.65 !important;
+}
+.case-content .network-lab-case .chg015-platform-progress .network-status-badge{
+  font-size:.72rem !important;
+  line-height:1.2 !important;
+}
+.case-content .network-lab-case .chg015-platform-progress .network-architecture-intro{
+  margin:0 0 1rem !important;
+}
+.case-content .network-lab-case .chg015-platform-progress .network-architecture-figure{
+  margin:1rem 0 1.75rem !important;
+}
+.case-content .network-lab-case .chg015-platform-progress .network-architecture-figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+}
+.case-content .network-lab-case .chg015-platform-progress .network-architecture-figure figcaption{
+  margin-top:.65rem;
+  color:var(--muted);
+  font-size:.88rem !important;
+  line-height:1.55 !important;
+}
+.case-content .network-lab-case .chg015-platform-progress .enterprise-roadmap-table{
+  font-size:17px !important;
+  line-height:1.55 !important;
+}
+.case-content .network-lab-case .chg015-platform-progress .enterprise-roadmap-table th,
+.case-content .network-lab-case .chg015-platform-progress .enterprise-roadmap-table td{
+  font-size:17px !important;
+  line-height:1.55 !important;
+}
+.case-content .network-lab-case .chg015-platform-progress .network-next-milestone{
+  margin:1.75rem 0 0 !important;
+}
+.case-content .network-lab-case .chg015-platform-progress .network-next-milestone h3{
+  margin:0 0 .6rem !important;
+}
+@media(max-width:650px){
+  .case-content .network-lab-case .chg015-platform-progress > h2{
+    font-size:1.5rem !important;
+  }
+  .case-content .network-lab-case .chg015-platform-progress h3{
+    font-size:1.05rem !important;
+  }
+}
