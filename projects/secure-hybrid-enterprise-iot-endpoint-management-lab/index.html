@@ -100,8 +100,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Business &amp; Architecture Problem</h2>
 <p>The original environment functioned, but several unrelated device classes shared the same user network. That design increased east-west trust, mixed administrative and business traffic, and made it difficult to apply least-privilege policy. The modernization program therefore focuses on service continuity while reducing implicit trust and improving operational control.</p>
 <section class="enterprise-roadmap-section">
-<h2>Enterprise Build Roadmap</h2>
-<p>This case study is part of a staged enterprise-modernization program rather than a collection of isolated lab tasks. The roadmap below shows the change sequence from the initial network remediation through compute, identity, endpoint management, monitoring, resilience, and final enterprise acceptance.</p>
+<h2>Secure Infrastructure Build Roadmap</h2>
+<p>This case study tracks the secure infrastructure foundation from the initial network remediation through CHG-015, the compute, virtualization, and QNAP application-platform milestone. Starting with CHG-016, the program continues on the <a href="/projects/microsoft-365-identity-cloud-administration/#planned-project-roadmap">Microsoft 365 Configuration, Identity &amp; Device Management Lab</a> page, where Windows Server, Active Directory, identity, endpoint management, security, monitoring, recovery, and final acceptance work are maintained.</p>
 <section class="enterprise-roadmap-panel" aria-labelledby="enterprise-roadmap-table-title">
 <h3 id="enterprise-roadmap-table-title" class="screen-reader-text">Enterprise build change roadmap</h3>
 <div class="enterprise-roadmap-table-wrap">
@@ -189,60 +189,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <td>Compute / virtualization / QNAP application platform</td>
 <td><span class="roadmap-status roadmap-status-progress">In Progress</span></td>
 </tr>
-<tr>
-<td>CHG-016</td>
-<td>Windows Server + Active Directory</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
-<tr>
-<td>CHG-017</td>
-<td>Microsoft Entra ID / hybrid identity</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
-<tr>
-<td>CHG-018</td>
-<td>Intune endpoint management</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
-<tr>
-<td>CHG-019</td>
-<td>BYOD / MAM / Conditional Access</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
-<tr>
-<td>CHG-020</td>
-<td>Endpoint security baseline</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
-<tr>
-<td>CHG-021</td>
-<td>Guest + wireless segmentation</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
-<tr>
-<td>CHG-022</td>
-<td>Central monitoring / logging</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
-<tr>
-<td>CHG-023</td>
-<td>Backup / recovery / UPS / restore testing</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
-<tr>
-<td>CHG-024</td>
-<td>Least-privilege firewall cleanup</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
-<tr>
-<td>CHG-025</td>
-<td>Enterprise acceptance &amp; disaster-recovery exercise</td>
-<td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
-</tr>
 </tbody>
-</table></div>
+</table>
+</div>
 </section>
-<p class="roadmap-current-position"><strong>Current position:</strong> CHG-014 is formally closed. CHG-015 has now validated the storage and recovery foundation, least-privilege local backup operations, a Microsoft OneDrive off-site backup-and-restore proof, container runtime and persistent storage, Virtualization Station prerequisites with an isolated virtual switch, and a Git-based local application deployment on the QNAP platform. Next: formalize the local-to-production release workflow, complete LAB-VM-01 planning, and continue toward securely published application workloads.</p>
+<p class="roadmap-current-position"><strong>Current position:</strong> CHG-014 is formally closed. CHG-015 has now validated the storage and recovery foundation, least-privilege local backup operations, a Microsoft OneDrive off-site backup-and-restore proof, container runtime and persistent storage, Virtualization Station prerequisites with an isolated virtual switch, and a Git-based local application deployment on the QNAP platform. CHG-015 is the final change tracked on this Secure Infrastructure page. Its remaining work is limited to completing the QNAP application-platform milestone; CHG-016 through CHG-025 continue on the Microsoft project page.</p>
+</section>
+<section class="network-next-milestone" aria-labelledby="microsoft-program-continuation-title">
+<h3 id="microsoft-program-continuation-title">Program Continuation — CHG-016 to CHG-025</h3>
+<p>The secure infrastructure change history remains on this page through CHG-015. The next stage of the program begins with Windows Server and Active Directory at CHG-016 and continues through Microsoft 365, Entra ID, Intune, endpoint security, integrated monitoring and recovery controls, and final acceptance at CHG-025. The detailed roadmap, implementation notes, screenshots, and validation evidence are maintained on the <a href="/projects/microsoft-365-identity-cloud-administration/#planned-project-roadmap">Microsoft 365 Configuration, Identity &amp; Device Management Lab</a> page.</p>
 </section>
 <h2>Target Architecture</h2>
 <p>The target architecture separates management, servers, protected storage, users, IoT/OT, printers, guests, and lab/testing systems. Inter-zone access is explicitly governed by business need instead of broad network adjacency. The physical design now also includes a secondary Cisco managed switch connected to the primary switching layer through an 802.1Q trunk.</p>
@@ -348,7 +303,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   → Printer web administration: not exposed to the user VLAN</p>
 <p>Management systems → Printer VLAN<br />
   → Administrative HTTPS: permitted<br />
-  → Print / status / scan: permitted as required</p></div>
+  → Print / status / scan: permitted as required</p>
+</div>
 <p><strong>Discovery note:</strong> automatic broadcast-style discovery was not relied upon across routed VLAN boundaries. The validated deployment pattern uses the copier&#8217;s stable network address. This provides a predictable enterprise configuration and can later be automated through endpoint management rather than weakening segmentation for discovery traffic.</p>
 <h2>Troubleshooting &amp; Fault Isolation</h2>
 <p>The work deliberately separates physical link, VLAN membership, routing, transport, service, authentication, and application evidence. Firewall counters are not treated as proof of application success. For IoT, the path was validated independently through network-server events, packet capture, MQTT publish/subscribe, and application ingestion. For storage, connectivity was separated from authentication and permissions before the NAS was moved.</p>
@@ -380,7 +336,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <h2>Public Disclosure</h2>
 <p>This case study intentionally sanitizes infrastructure evidence. Exact addressing, hostnames, MAC addresses, serial numbers, account names, credentials, SSIDs, security tokens, NAS share names, radio identifiers, tenant/application IDs, and screenshots containing sensitive administrative data are withheld or redacted.</p>
 <section class="chg015-platform-progress" aria-labelledby="chg015-platform-progress-title">
-<h2 id="chg015-platform-progress-title">Current Milestone &mdash; CHG-015</h2>
+<h2 id="chg015-platform-progress-title">Final Secure Infrastructure Milestone &mdash; CHG-015</h2>
 <p>CHG-015 extends the segmented network foundation into a resilient compute and application platform. The work combines protected storage, layered recovery, containerized workloads, virtualization readiness, and a controlled release path for locally validated services.</p>
 <h3 class="network-change-heading">Resilient Storage &amp; Recovery Foundation <span class="network-status-badge network-status-pass">VALIDATED</span></h3>
 <p>A mirrored storage pool, encrypted application volume, hardened workload shares, scheduled snapshots, and a secondary-NAS recovery path were built and tested. Least-privilege backup access and staggered production jobs were then validated. A separate Microsoft OneDrive proof demonstrated off-site backup and successful cloud-to-NAS restore before broader rollout was intentionally deferred.</p>
@@ -449,8 +405,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </table>
 </div>
 <section class="network-next-milestone" aria-labelledby="network-next-milestone-title">
-<h3 id="network-next-milestone-title">Next Milestone</h3>
-<p>The next CHG-015 work moves the validated local platform toward a repeatable release and securely published workload model.</p>
+<h3 id="network-next-milestone-title">CHG-015 Remaining Work</h3>
+<p>The remaining CHG-015 work completes the QNAP application-platform milestone before this Secure Infrastructure roadmap is considered complete.</p>
 <ul>
 <li>Formalize the Git-based local-to-production update workflow and rollback sequence.</li>
 <li>Review memory requirements and complete LAB-VM-01 planning.</li>
