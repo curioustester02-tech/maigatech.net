@@ -196,22 +196,22 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </tr>
 <tr>
 <td>CHG-017</td>
-<td>Microsoft Entra ID / hybrid identity</td>
+<td><a href="/projects/microsoft-365-identity-cloud-administration/#planned-project-roadmap" title="View the detailed Microsoft configuration and device management roadmap">Microsoft Entra ID / hybrid identity</a></td>
 <td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
 </tr>
 <tr>
 <td>CHG-018</td>
-<td>Intune endpoint management</td>
+<td><a href="/projects/microsoft-365-identity-cloud-administration/#planned-project-roadmap" title="View the detailed Microsoft configuration and device management roadmap">Intune endpoint management</a></td>
 <td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
 </tr>
 <tr>
 <td>CHG-019</td>
-<td>BYOD / MAM / Conditional Access</td>
+<td><a href="/projects/microsoft-365-identity-cloud-administration/#planned-project-roadmap" title="View the detailed Microsoft configuration and device management roadmap">BYOD / MAM / Conditional Access</a></td>
 <td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
 </tr>
 <tr>
 <td>CHG-020</td>
-<td>Endpoint security baseline</td>
+<td><a href="/projects/microsoft-365-identity-cloud-administration/#planned-project-roadmap" title="View the detailed Microsoft configuration and device management roadmap">Endpoint security baseline</a></td>
 <td><span class="roadmap-status roadmap-status-planned">Planned</span></td>
 </tr>
 <tr>
@@ -244,6 +244,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </section>
 <p class="roadmap-current-position"><strong>Current position:</strong> CHG-014 is formally closed. CHG-015 has now validated the storage and recovery foundation, least-privilege local backup operations, a Microsoft OneDrive off-site backup-and-restore proof, container runtime and persistent storage, Virtualization Station prerequisites with an isolated virtual switch, and a Git-based local application deployment on the QNAP platform. Next: formalize the local-to-production release workflow, complete LAB-VM-01 planning, and continue toward securely published application workloads.</p>
 </section>
+<p><strong>Microsoft workstream:</strong> The detailed configuration and test plan for CHG-017 through CHG-020 (Entra ID, Intune, BYOD/MAM, Conditional Access and endpoint security) is maintained on the <a href="/projects/microsoft-365-identity-cloud-administration/">Microsoft 365 Configuration, Identity &amp; Device Management Lab</a> project page. Those changes remain <strong>Planned</strong> in this architecture roadmap until validated. The network, QNAP, IoT, virtualization and infrastructure change history stays here.</p>
 <h2>Target Architecture</h2>
 <p>The target architecture separates management, servers, protected storage, users, IoT/OT, printers, guests, and lab/testing systems. Inter-zone access is explicitly governed by business need instead of broad network adjacency. The physical design now also includes a secondary Cisco managed switch connected to the primary switching layer through an 802.1Q trunk.</p>
 <figure>
