@@ -34,7 +34,7 @@
 <meta name="twitter:title" content="Data Analytics &amp; AI-Augmented Workflows | Abdoulaye Maiga">
 <meta name="twitter:description" content="Applied data-analysis methods and generative AI as professional productivity tools for technical research, troubleshooting, scripting, documentation, analysi…">
 <meta name="twitter:image" content="https://www.maigatech.net/wp-content/themes/leadership-portfolio/assets/headshot.jpg">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","@id":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/#work","url":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/","name":"Data Analytics &#038; AI-Augmented Technical Workflows","headline":"Data Analytics &#038; AI-Augmented Technical Workflows","description":"Applied data-analysis methods and generative AI as professional productivity tools for technical research, troubleshooting, scripting, documentation, analysi…","image":"https://www.maigatech.net/wp-content/themes/leadership-portfolio/assets/headshot.jpg","creator":{"@id":"https://www.maigatech.net/#person"},"dateModified":"2026-10-10T16:57:20+00:00","mainEntityOfPage":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/"},{"@type":"BreadcrumbList","@id":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.maigatech.net/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.maigatech.net/projects/"},{"@type":"ListItem","position":3,"name":"Data Analytics &#038; AI-Augmented Technical Workflows","item":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","@id":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/#work","url":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/","name":"Data Analytics &#038; AI-Augmented Technical Workflows","headline":"Data Analytics &#038; AI-Augmented Technical Workflows","description":"Applied data-analysis methods and generative AI as professional productivity tools for technical research, troubleshooting, scripting, documentation, analysi…","image":"https://www.maigatech.net/wp-content/themes/leadership-portfolio/assets/headshot.jpg","creator":{"@id":"https://www.maigatech.net/#person"},"dateModified":"2026-10-12T19:59:53+00:00","mainEntityOfPage":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/"},{"@type":"BreadcrumbList","@id":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.maigatech.net/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.maigatech.net/projects/"},{"@type":"ListItem","position":3,"name":"Data Analytics &#038; AI-Augmented Technical Workflows","item":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/"}]}]}</script>
 <!-- /MaigaTech SEO Foundation v1 -->
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -125,6 +125,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <section class="case-study-expansion" aria-labelledby="expanded-project-scope">
 <nav class="case-study-local-nav" aria-label="Case study section navigation">
 <a href="#expanded-project-scope">Scope</a><br />
+<a href="#analytics-evidence">Current Evidence</a><br />
 <a href="#planned-project-roadmap">Roadmap</a><br />
 <a href="#project-updates">Project Updates</a><br />
 <a href="#related-case-studies">Related Projects</a><br />
@@ -133,10 +134,69 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Build a traceable analytics case study that helps readers follow a dataset from initial inspection through reliable conclusions. The current portfolio example uses a healthcare-related dataset to illustrate data quality, transformations, statistical interpretation and reproducible reporting, while AI assistance is treated as a reviewed engineering aid rather than a source of unverified answers.</p>
 <h3>Technical approach and validation</h3>
 <p>The work will use a data dictionary, transformation log, staged source files and reproducible notebooks. Each finding must be traceable to an input, calculation, analytical decision and validation check. Before publishing charts or claims, the methodology will distinguish descriptive observations from causal conclusions and explain missing data, leakage risks and limitations.</p>
-<h2 id="planned-project-roadmap">Planned Project Roadmap</h2>
-<p>The roadmap below is a <strong>Planned</strong> publishing and technical-validation sequence. No Python, SQL, model accuracy or dashboard result is presented as completed until it has been run and checked.</p>
+<p><!-- MAIGATECH-DIABETES-EVIDENCE-V16-2 START --></p>
+<section class="analytics-evidence-panel" aria-labelledby="analytics-evidence">
+<h2 id="analytics-evidence">Healthcare Analytics Case Study — Current Evidence</h2>
+<p class="analytics-evidence-status"><strong>Status:</strong> In Progress · Excel / Power Query data preparation</p>
+<p>This case study uses the historical UCI Diabetes 130-US Hospitals dataset to build a traceable analytics workflow from source inspection through validated reporting. The current Excel phase contains <strong>101,766 hospital encounters</strong> across <strong>71,518 distinct patient identifiers</strong>, so repeat encounters are evaluated at the encounter level rather than automatically treated as duplicate records.</p>
+<p>Power Query preserves the original source as a reference query while transformations are performed in a separate working query. Initial data-quality work has normalized all seven fields that use literal <code>?</code> values to represent missing information. Full-data profiling was used to verify the field-level results below.</p>
+<div class="analytics-evidence-table-wrap">
+<table class="analytics-evidence-table">
+<thead>
+<tr>
+<th>Field</th>
+<th>Missing values normalized</th>
+<th>Share of encounters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>weight</code></td>
+<td>98,569</td>
+<td>96.86%</td>
+</tr>
+<tr>
+<td><code>medical_specialty</code></td>
+<td>49,949</td>
+<td>49.08%</td>
+</tr>
+<tr>
+<td><code>payer_code</code></td>
+<td>40,256</td>
+<td>39.56%</td>
+</tr>
+<tr>
+<td><code>race</code></td>
+<td>2,273</td>
+<td>2.23%</td>
+</tr>
+<tr>
+<td><code>diag_1</code></td>
+<td>21</td>
+<td>0.02%</td>
+</tr>
+<tr>
+<td><code>diag_2</code></td>
+<td>358</td>
+<td>0.35%</td>
+</tr>
+<tr>
+<td><code>diag_3</code></td>
+<td>1,423</td>
+<td>1.40%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="analytics-evidence-note"><strong>Validation note:</strong> Percentages use 101,766 encounters as the denominator. These are field-specific missingness counts and should not be summed to estimate the number of encounters with missing data.</p>
+<p><strong>Current boundary:</strong> broader category validation, duplicate/key policy, data types, range checks, the cleaned export, and Python/Pandas reconciliation remain in progress or planned. No Python, SQL, dashboard, model-accuracy, causal, or clinical conclusion is presented as completed.</p>
+<p class="analytics-evidence-source"><strong>Dataset attribution:</strong> UCI Machine Learning Repository, <em>Diabetes 130-US Hospitals for Years 1999-2008</em> (historical public research data; CC BY 4.0).</p>
+</section>
+<p><!-- MAIGATECH-DIABETES-EVIDENCE-V16-2 END --></p>
+<h2 id="planned-project-roadmap">Project Roadmap</h2>
+<p>The roadmap below tracks the case study from research framing through repeatable reporting. DA-01 through DA-03 are now <strong>In Progress</strong> based on verified Excel / Power Query evidence. Later Python, SQL and reporting phases remain planned until their outputs have been run and checked.</p>
 <section class="planned-phase">
-<h3>DA-01 — Research question and dataset inventory <small>(Planned)</small></h3>
+<h3>DA-01 — Research question and dataset inventory <small>(In Progress — Intake Documented)</small></h3>
 <ol>
 <li>State a focused question and define target measures</li>
 <li>Review field names, types, units and documentation</li>
@@ -145,7 +205,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Expected deliverable:</strong> Dataset inventory and business-question brief.</p>
 </section>
 <section class="planned-phase">
-<h3>DA-02 — Excel data profiling <small>(Planned)</small></h3>
+<h3>DA-02 — Excel data profiling <small>(In Progress — Profiling Underway)</small></h3>
 <ol>
 <li>Count records and inspect data types, nulls and duplicates</li>
 <li>Identify categorical ranges, outliers and impossible values</li>
@@ -154,7 +214,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Expected deliverable:</strong> Data dictionary and quality findings.</p>
 </section>
 <section class="planned-phase">
-<h3>DA-03 — Cleaning and transformation <small>(Planned)</small></h3>
+<h3>DA-03 — Cleaning and transformation <small>(In Progress — 7/7 Missing-Marker Fields Normalized)</small></h3>
 <ol>
 <li>Define deterministic rules for missing or inconsistent values</li>
 <li>Preserve an untouched raw dataset and version transformations</li>
@@ -209,9 +269,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </section>
 <section class="project-updates-panel" aria-labelledby="project-updates">
 <h2 id="project-updates">Project Updates</h2>
-<p><strong>Update status:</strong> The new milestones listed above are planned. No completed milestone update is claimed by this section; dated progress notes will be added only when work has been verified.</p>
-<p><strong>Next planned update:</strong> Document the Excel profiling decisions and complete the validation log before promoting any downstream analysis to completed.</p>
-<p>Future entries will include a date, the milestone identifier, what was implemented or documented, sanitized validation evidence, lessons learned, and the next step.</p>
+<h3>October 12, 2026 — Diabetes Analytics: Excel data-quality milestone</h3>
+<p>Initial missing-marker normalization has been completed and checked for the seven fields in the historical diabetes hospital-encounter dataset that use literal <code>?</code> placeholders. The Power Query workflow keeps the raw source separate from the working transformation query, and full-data profiles were used to verify the reviewed fields across 101,766 encounters.</p>
+<p>Missingness is especially high in <code>weight</code> (96.86%), <code>medical_specialty</code> (49.08%), and <code>payer_code</code> (39.56%). Overall data cleaning remains in progress, including category validation, key/duplicate policy, data types and range checks.</p>
+<p><strong>Next planned update:</strong> Verify the newest query steps persist after save/reopen, continue category and data-quality checks, create the audited cleaned extract, and reconcile it in Python/Pandas before downstream analysis is promoted to completed.</p>
+<p><strong>Scope note:</strong> This is an independent learning and portfolio analysis of historical public data. It is not presented as a clinical prediction tool or current clinical guidance.</p>
 </section>
 <h2 id="related-case-studies">Related Case Studies</h2>
 <ul>

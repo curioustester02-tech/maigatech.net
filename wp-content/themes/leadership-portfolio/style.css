@@ -2188,3 +2188,69 @@ body.postid-57 .case-side .network-tech-items {
     margin:.4rem 0 0;
   }
 }
+
+/* MaigaTech Data Analytics evidence v16.2 2026-10-12 */
+.case-content .case-study-expansion .analytics-evidence-panel{
+  margin:1.35rem 0 2rem;
+  padding:1.2rem 1.25rem;
+  border:1px solid var(--line);
+  border-left:4px solid var(--blue);
+  border-radius:14px;
+  background:#fff;
+}
+.case-content .case-study-expansion .analytics-evidence-panel h2{
+  margin-top:0;
+}
+.case-content .case-study-expansion .analytics-evidence-status{
+  display:inline-block;
+  margin:.15rem 0 1rem;
+  padding:.35rem .65rem;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--soft);
+  color:var(--ink);
+  font-size:.88rem;
+}
+.case-content .case-study-expansion .analytics-evidence-table-wrap{
+  width:100%;
+  overflow-x:auto;
+  margin:1rem 0;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+}
+.case-content .case-study-expansion .analytics-evidence-table{
+  width:100%;
+  min-width:620px;
+  border-collapse:collapse;
+  margin:0;
+}
+.case-content .case-study-expansion .analytics-evidence-table th,
+.case-content .case-study-expansion .analytics-evidence-table td{
+  padding:.7rem .8rem;
+  text-align:left;
+  vertical-align:top;
+  border-bottom:1px solid var(--line);
+}
+.case-content .case-study-expansion .analytics-evidence-table th{
+  background:var(--soft);
+  color:var(--ink);
+  font-weight:800;
+}
+.case-content .case-study-expansion .analytics-evidence-table tbody tr:last-child td{
+  border-bottom:0;
+}
+.case-content .case-study-expansion .analytics-evidence-note,
+.case-content .case-study-expansion .analytics-evidence-source{
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.6;
+}
+.case-content .case-study-expansion .project-updates-panel h3{
+  margin:.25rem 0 .7rem;
+}
+@media(max-width:650px){
+  .case-content .case-study-expansion .analytics-evidence-panel{
+    padding:1rem;
+  }
+}
