@@ -34,7 +34,7 @@
 <meta name="twitter:title" content="Data Analytics &amp; AI-Augmented Workflows | Abdoulaye Maiga">
 <meta name="twitter:description" content="Applied data-analysis methods and generative AI as professional productivity tools for technical research, troubleshooting, scripting, documentation, analysi…">
 <meta name="twitter:image" content="https://www.maigatech.net/wp-content/themes/leadership-portfolio/assets/headshot.jpg">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","@id":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/#work","url":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/","name":"Data Analytics &#038; AI-Augmented Technical Workflows","headline":"Data Analytics &#038; AI-Augmented Technical Workflows","description":"Applied data-analysis methods and generative AI as professional productivity tools for technical research, troubleshooting, scripting, documentation, analysi…","image":"https://www.maigatech.net/wp-content/themes/leadership-portfolio/assets/headshot.jpg","creator":{"@id":"https://www.maigatech.net/#person"},"dateModified":"2026-10-12T19:59:53+00:00","mainEntityOfPage":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/"},{"@type":"BreadcrumbList","@id":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.maigatech.net/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.maigatech.net/projects/"},{"@type":"ListItem","position":3,"name":"Data Analytics &#038; AI-Augmented Technical Workflows","item":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","@id":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/#work","url":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/","name":"Data Analytics &#038; AI-Augmented Technical Workflows","headline":"Data Analytics &#038; AI-Augmented Technical Workflows","description":"Applied data-analysis methods and generative AI as professional productivity tools for technical research, troubleshooting, scripting, documentation, analysi…","image":"https://www.maigatech.net/wp-content/themes/leadership-portfolio/assets/headshot.jpg","creator":{"@id":"https://www.maigatech.net/#person"},"dateModified":"2026-10-13T04:26:32+00:00","mainEntityOfPage":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/"},{"@type":"BreadcrumbList","@id":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.maigatech.net/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://www.maigatech.net/projects/"},{"@type":"ListItem","position":3,"name":"Data Analytics &#038; AI-Augmented Technical Workflows","item":"https://www.maigatech.net/projects/data-analytics-ai-augmented-workflows/"}]}]}</script>
 <!-- /MaigaTech SEO Foundation v1 -->
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
@@ -125,8 +125,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <section class="case-study-expansion" aria-labelledby="expanded-project-scope">
 <nav class="case-study-local-nav" aria-label="Case study section navigation">
 <a href="#expanded-project-scope">Scope</a><br />
-<a href="#analytics-evidence">Current Evidence</a><br />
 <a href="#planned-project-roadmap">Roadmap</a><br />
+<a href="#analytics-evidence">Current Evidence</a><br />
 <a href="#project-updates">Project Updates</a><br />
 <a href="#related-case-studies">Related Projects</a><br />
 </nav>
@@ -134,96 +134,37 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p>Build a traceable analytics case study that helps readers follow a dataset from initial inspection through reliable conclusions. The current portfolio example uses a healthcare-related dataset to illustrate data quality, transformations, statistical interpretation and reproducible reporting, while AI assistance is treated as a reviewed engineering aid rather than a source of unverified answers.</p>
 <h3>Technical approach and validation</h3>
 <p>The work will use a data dictionary, transformation log, staged source files and reproducible notebooks. Each finding must be traceable to an input, calculation, analytical decision and validation check. Before publishing charts or claims, the methodology will distinguish descriptive observations from causal conclusions and explain missing data, leakage risks and limitations.</p>
-<p><!-- MAIGATECH-DIABETES-EVIDENCE-V16-2 START --></p>
-<section class="analytics-evidence-panel" aria-labelledby="analytics-evidence">
-<h2 id="analytics-evidence">Healthcare Analytics Case Study — Current Evidence</h2>
-<p class="analytics-evidence-status"><strong>Status:</strong> In Progress · Excel / Power Query data preparation</p>
-<p>This case study uses the historical UCI Diabetes 130-US Hospitals dataset to build a traceable analytics workflow from source inspection through validated reporting. The current Excel phase contains <strong>101,766 hospital encounters</strong> across <strong>71,518 distinct patient identifiers</strong>, so repeat encounters are evaluated at the encounter level rather than automatically treated as duplicate records.</p>
-<p>Power Query preserves the original source as a reference query while transformations are performed in a separate working query. Initial data-quality work has normalized all seven fields that use literal <code>?</code> values to represent missing information. Full-data profiling was used to verify the field-level results below.</p>
-<div class="analytics-evidence-table-wrap">
-<table class="analytics-evidence-table">
-<thead>
-<tr>
-<th>Field</th>
-<th>Missing values normalized</th>
-<th>Share of encounters</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>weight</code></td>
-<td>98,569</td>
-<td>96.86%</td>
-</tr>
-<tr>
-<td><code>medical_specialty</code></td>
-<td>49,949</td>
-<td>49.08%</td>
-</tr>
-<tr>
-<td><code>payer_code</code></td>
-<td>40,256</td>
-<td>39.56%</td>
-</tr>
-<tr>
-<td><code>race</code></td>
-<td>2,273</td>
-<td>2.23%</td>
-</tr>
-<tr>
-<td><code>diag_1</code></td>
-<td>21</td>
-<td>0.02%</td>
-</tr>
-<tr>
-<td><code>diag_2</code></td>
-<td>358</td>
-<td>0.35%</td>
-</tr>
-<tr>
-<td><code>diag_3</code></td>
-<td>1,423</td>
-<td>1.40%</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p class="analytics-evidence-note"><strong>Validation note:</strong> Percentages use 101,766 encounters as the denominator. These are field-specific missingness counts and should not be summed to estimate the number of encounters with missing data.</p>
-<p><strong>Current boundary:</strong> broader category validation, duplicate/key policy, data types, range checks, the cleaned export, and Python/Pandas reconciliation remain in progress or planned. No Python, SQL, dashboard, model-accuracy, causal, or clinical conclusion is presented as completed.</p>
-<p class="analytics-evidence-source"><strong>Dataset attribution:</strong> UCI Machine Learning Repository, <em>Diabetes 130-US Hospitals for Years 1999-2008</em> (historical public research data; CC BY 4.0).</p>
-</section>
-<p><!-- MAIGATECH-DIABETES-EVIDENCE-V16-2 END --></p>
 <h2 id="planned-project-roadmap">Project Roadmap</h2>
 <p>The roadmap below tracks the case study from research framing through repeatable reporting. DA-01 through DA-03 are now <strong>In Progress</strong> based on verified Excel / Power Query evidence. Later Python, SQL and reporting phases remain planned until their outputs have been run and checked.</p>
 <section class="planned-phase">
-<h3>DA-01 — Research question and dataset inventory <small>(In Progress — Intake Documented)</small></h3>
+<h3>DA-01 — Research question and dataset inventory <small class="roadmap-status-badge roadmap-status-complete">Completed · Validated</small></h3>
 <ol>
 <li>State a focused question and define target measures</li>
 <li>Review field names, types, units and documentation</li>
 <li>Record provenance, licensing and confidentiality constraints</li>
 </ol>
-<p><strong>Expected deliverable:</strong> Dataset inventory and business-question brief.</p>
+<p><strong>Verified deliverable:</strong> Dataset intake, provenance, 50-field structure, encounter-level grain, and baseline record counts documented.</p>
 </section>
 <section class="planned-phase">
-<h3>DA-02 — Excel data profiling <small>(In Progress — Profiling Underway)</small></h3>
+<h3>DA-02 — Excel data profiling <small class="roadmap-status-badge roadmap-status-complete">Completed · Validated</small></h3>
 <ol>
 <li>Count records and inspect data types, nulls and duplicates</li>
 <li>Identify categorical ranges, outliers and impossible values</li>
 <li>Create a baseline profiling log with reproducible screenshots</li>
 </ol>
-<p><strong>Expected deliverable:</strong> Data dictionary and quality findings.</p>
+<p><strong>Verified deliverable:</strong> Full-dataset profiling and documented data-quality findings.</p>
 </section>
 <section class="planned-phase">
-<h3>DA-03 — Cleaning and transformation <small>(In Progress — 7/7 Missing-Marker Fields Normalized)</small></h3>
+<h3>DA-03 — Cleaning and transformation <small class="roadmap-status-badge roadmap-status-complete">Completed · Validated</small></h3>
 <ol>
 <li>Define deterministic rules for missing or inconsistent values</li>
 <li>Preserve an untouched raw dataset and version transformations</li>
 <li>Reconcile row counts and key measures after each cleaning operation</li>
 </ol>
-<p><strong>Expected deliverable:</strong> Clean data extract and transformation audit.</p>
+<p><strong>Verified deliverable:</strong> Audited UTF-8 cleaned extract, eight documented transformations, 12/12 Excel reconciliation checks, and 33/33 independent export QA checks.</p>
 </section>
 <section class="planned-phase">
-<h3>DA-04 — Python exploratory analysis <small>(Planned)</small></h3>
+<h3>DA-04 — Python exploratory analysis <small class="roadmap-status-badge roadmap-status-planned">Planned</small></h3>
 <ol>
 <li>Build a Jupyter/Pandas ingestion and validation notebook</li>
 <li>Compute descriptive measures and segment the population appropriately</li>
@@ -232,7 +173,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Expected deliverable:</strong> Reviewed notebook and explanatory plots.</p>
 </section>
 <section class="planned-phase">
-<h3>DA-05 — SQL analysis <small>(Planned)</small></h3>
+<h3>DA-05 — SQL analysis <small class="roadmap-status-badge roadmap-status-planned">Planned</small></h3>
 <ol>
 <li>Load the validated subset into a documented SQL schema</li>
 <li>Write aggregation and cohort queries for selected questions</li>
@@ -241,7 +182,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Expected deliverable:</strong> SQL scripts and reconciliation table.</p>
 </section>
 <section class="planned-phase">
-<h3>DA-06 — Reporting and interpretation <small>(Planned)</small></h3>
+<h3>DA-06 — Reporting and interpretation <small class="roadmap-status-badge roadmap-status-planned">Planned</small></h3>
 <ol>
 <li>Select a small set of decision-relevant visualizations</li>
 <li>Draft a Power BI or equivalent dashboard after validated measures exist</li>
@@ -250,7 +191,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Expected deliverable:</strong> Dashboard draft and findings narrative.</p>
 </section>
 <section class="planned-phase">
-<h3>DA-07 — AI-assisted workflow validation <small>(Planned)</small></h3>
+<h3>DA-07 — AI-assisted workflow validation <small class="roadmap-status-badge roadmap-status-planned">Planned</small></h3>
 <ol>
 <li>Record where AI was used for research or code suggestions</li>
 <li>Review output for correctness, security and reproducibility</li>
@@ -259,7 +200,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><strong>Expected deliverable:</strong> AI-use statement and quality-control checklist.</p>
 </section>
 <section class="planned-phase">
-<h3>DA-08 — Final case study and repeatability <small>(Planned)</small></h3>
+<h3>DA-08 — Final case study and repeatability <small class="roadmap-status-badge roadmap-status-planned">Planned</small></h3>
 <ol>
 <li>Publish sanitized evidence and downloadable non-sensitive methodology</li>
 <li>Link each chart to its source method and validation notes</li>
@@ -267,12 +208,45 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </ol>
 <p><strong>Expected deliverable:</strong> Evidence-based published analytics case study.</p>
 </section>
+<p><!-- MAIGATECH-DIABETES-EXCEL-COMPLETE-V50 START --></p>
+<section class="analytics-evidence-panel analytics-excel-complete" aria-labelledby="analytics-evidence">
+<h2 id="analytics-evidence">Excel Data Quality &amp; Cleaning — Completed October 12, 2026</h2>
+<p class="analytics-evidence-status analytics-status-passed"><strong>QA checks passed</strong> · Excel / Power Query data preparation completed</p>
+<p>A traceable preparation workflow for the historical Diabetes 130-US Hospitals dataset is now complete. Using Excel Power Query, the project profiled <strong>101,766 hospital encounters</strong> across <strong>50 source fields</strong>, preserved the untouched source, and applied eight documented transformations: seven source <code>?</code> missing-value markers plus one <code>Unknown/Invalid</code> gender category. Encounters were not deleted and unsupported values were not imputed.</p>
+<div class="analytics-kpi-grid" aria-label="Excel phase validation summary">
+<div class="analytics-kpi-card"><strong>101,766</strong><span>encounter records independently validated</span></div>
+<div class="analytics-kpi-card"><strong>50</strong><span>source fields with structure preserved</span></div>
+<div class="analytics-kpi-card"><strong>12/12</strong><span>Excel reconciliation checks passed</span></div>
+<div class="analytics-kpi-card"><strong>33/33</strong><span>cleaned-export QA checks passed</span></div>
+<div class="analytics-kpi-card"><strong>11.16%</strong><span>historical encounters labeled readmission &lt;30 days</span></div>
+</div>
+<h3>Dataset integrity and reconciliation</h3>
+<p>The validated export contains <strong>101,766 unique encounter IDs</strong> and <strong>71,518 unique patient IDs</strong>, with <strong>zero duplicate encounter IDs</strong>. A row-by-row, cell-by-cell comparison against the original source found <strong>zero unexpected differences</strong> after the eight intended replacements. A separate Python script was used only as an independent export-integrity check; Python exploratory analysis remains a later roadmap phase.</p>
+<p><strong>Repeat encounters:</strong> 16,773 patients have more than one encounter. That is not equivalent to a 30-day readmission and is retained as legitimate encounter-level history.</p>
+<div class="analytics-figure-grid">
+<figure class="analytics-evidence-figure">
+<img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/data-analytics/missing_value_profile_aggregate_v50.png" alt="Aggregate missing-data profile for eight cleaned fields across 101,766 encounters, led by weight at 96.86 percent missing, medical specialty at 49.08 percent, and payer code at 39.56 percent."><figcaption>Aggregate missing-data profile after source placeholders were normalized. Literal source category <code>None</code> in A1C and glucose fields is deliberately not treated as null.</figcaption></figure>
+<figure class="analytics-evidence-figure">
+<img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/data-analytics/readmission_distribution_aggregate_v50.png" alt="Aggregate readmission-label distribution: 54,864 encounters labeled NO, 35,545 labeled greater than 30 days, and 11,357 labeled less than 30 days."><figcaption>Observed historical readmission labels at the encounter level. The 11.16% &lt;30 share is descriptive, not a predictive or causal result.</figcaption></figure>
+</div>
+<h3>Excel quality-control evidence</h3>
+<figure class="analytics-evidence-figure analytics-evidence-qa">
+<img decoding="async" src="/wp-content/themes/leadership-portfolio/assets/data-analytics/excel_qa_12_pass_sanitized_crop_v50.png" alt="Sanitized Excel Power Query quality-control table showing 12 aggregate validation metrics, with observed and expected values matching and all checks marked PASS."><figcaption>Sanitized aggregate QA view: all 12 final Excel reconciliation checks passed. No row-level patient or encounter identifiers are shown in this preview asset.</figcaption></figure>
+<h3>Baseline outcomes and limitations</h3>
+<p>Readmission labels are preserved as recorded: <strong>54,864 NO</strong>, <strong>35,545 &gt;30</strong>, and <strong>11,357 &lt;30</strong>. The &lt;30 category represents <strong>11.16%</strong> of encounters. This is a descriptive baseline only.</p>
+<p>Source-recorded <code>weight</code> is absent for <strong>98,569 encounters (96.86%)</strong>, <code>medical_specialty</code> for <strong>49,949 (49.08%)</strong>, and <code>payer_code</code> for <strong>40,256 (39.56%)</strong>. The source-coded <code>None</code> labels were preserved as categories for A1C (<strong>84,748; 83.28%</strong>) and glucose testing (<strong>96,420; 94.75%</strong>), rather than converted into clinical measurements.</p>
+<h3>Next analytical phase</h3>
+<p>DA-04 begins with Jupyter/Pandas exploratory analysis, followed by SQL validation, Power BI reporting, a light Tableau comparison, documented AI-review practices, and final integrated interpretation. No EDA finding, prediction, causal effect, SQL dashboard result, model accuracy, or clinical-efficacy claim is presented as completed.</p>
+<p class="analytics-evidence-source"><strong>Data source:</strong> UCI Machine Learning Repository — <a href="https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008">Diabetes 130-US Hospitals for Years 1999–2008</a>. Historical public research data.</p>
+</section>
+<p><!-- MAIGATECH-DIABETES-EXCEL-COMPLETE-V50 END --></p>
 <section class="project-updates-panel" aria-labelledby="project-updates">
 <h2 id="project-updates">Project Updates</h2>
-<h3>October 12, 2026 — Diabetes Analytics: Excel data-quality milestone</h3>
-<p>Initial missing-marker normalization has been completed and checked for the seven fields in the historical diabetes hospital-encounter dataset that use literal <code>?</code> placeholders. The Power Query workflow keeps the raw source separate from the working transformation query, and full-data profiles were used to verify the reviewed fields across 101,766 encounters.</p>
-<p>Missingness is especially high in <code>weight</code> (96.86%), <code>medical_specialty</code> (49.08%), and <code>payer_code</code> (39.56%). Overall data cleaning remains in progress, including category validation, key/duplicate policy, data types and range checks.</p>
-<p><strong>Next planned update:</strong> Verify the newest query steps persist after save/reopen, continue category and data-quality checks, create the audited cleaned extract, and reconcile it in Python/Pandas before downstream analysis is promoted to completed.</p>
+<h3>October 12, 2026 — Excel / Power Query preparation phase completed</h3>
+<p>The initial Excel data-quality and cleaning phase is complete and independently reconciled. The workflow preserved 101,766 encounters and all 50 source fields while applying exactly eight intended replacements: seven literal missing-value markers and one invalid gender category.</p>
+<p><strong>Validation:</strong> 12/12 final Excel reconciliation checks passed, 33/33 independent cleaned-export QA checks passed, duplicate encounter IDs remained at zero, and a cell-level comparison found zero unexpected differences from the original source beyond the intended transformations.</p>
+<p><strong>Baseline:</strong> 11,357 encounters carry the historical <code>&lt;30</code> readmission label (11.16%), 35,545 carry <code>&gt;30</code>, and 54,864 carry <code>NO</code>. These are descriptive encounter-level labels, not predictive or causal findings.</p>
+<p><strong>Next planned update:</strong> Begin DA-04 with reproducible Jupyter/Pandas exploratory analysis using the validated cleaned export. SQL, dashboard reporting, and integrated interpretation remain planned.</p>
 <p><strong>Scope note:</strong> This is an independent learning and portfolio analysis of historical public data. It is not presented as a clinical prediction tool or current clinical guidance.</p>
 </section>
 <h2 id="related-case-studies">Related Case Studies</h2>

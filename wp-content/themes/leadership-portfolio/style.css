@@ -2254,3 +2254,120 @@ body.postid-57 .case-side .network-tech-items {
     padding:1rem;
   }
 }
+
+/* MaigaTech Diabetes Excel completed preview v50 2026-10-12 */
+.case-content .case-study-expansion .analytics-excel-complete h3{
+  margin:1.5rem 0 .55rem;
+}
+.case-content .case-study-expansion .analytics-kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:.8rem;
+  margin:1.15rem 0 1.5rem;
+}
+.case-content .case-study-expansion .analytics-kpi-card{
+  padding:1rem;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--soft);
+}
+.case-content .case-study-expansion .analytics-kpi-card strong{
+  display:block;
+  margin-bottom:.3rem;
+  color:var(--navy);
+  font-size:1.35rem;
+  line-height:1.2;
+}
+.case-content .case-study-expansion .analytics-kpi-card span{
+  display:block;
+  color:var(--muted);
+  font-size:.88rem;
+  line-height:1.45;
+}
+.case-content .case-study-expansion .analytics-figure-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+  margin:1.25rem 0 1.6rem;
+}
+.case-content .case-study-expansion .analytics-evidence-figure{
+  margin:1rem 0 1.5rem;
+}
+.case-content .case-study-expansion .analytics-figure-grid .analytics-evidence-figure{
+  margin:0;
+}
+.case-content .case-study-expansion .analytics-evidence-figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+}
+.case-content .case-study-expansion .analytics-evidence-figure figcaption{
+  margin-top:.55rem;
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.55;
+}
+.case-content .case-study-expansion .analytics-evidence-qa{
+  max-width:760px;
+}
+@media(max-width:800px){
+  .case-content .case-study-expansion .analytics-kpi-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .case-content .case-study-expansion .analytics-figure-grid{
+    grid-template-columns:1fr;
+  }
+}
+@media(max-width:520px){
+  .case-content .case-study-expansion .analytics-kpi-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* MaigaTech roadmap status badges v50.2 */
+.case-content .case-study-expansion .planned-phase h3 small.roadmap-status-badge{
+  display:inline-flex;
+  align-items:center;
+  margin-left:.45rem;
+  padding:.22rem .58rem;
+  border:1px solid;
+  border-radius:999px;
+  font-size:.72rem;
+  font-weight:800;
+  line-height:1.2;
+  vertical-align:.12em;
+  white-space:nowrap;
+}
+
+.case-content .case-study-expansion .planned-phase h3 small.roadmap-status-complete{
+  background:#ecfdf3;
+  border-color:#bbf7d0;
+  color:#166534;
+}
+
+.case-content .case-study-expansion .planned-phase h3 small.roadmap-status-in-progress{
+  background:#fff7ed;
+  border-color:#fed7aa;
+  color:#9a3412;
+}
+
+.case-content .case-study-expansion .planned-phase h3 small.roadmap-status-planned{
+  background:#f3f4f6;
+  border-color:#d1d5db;
+  color:#4b5563;
+}
+
+.case-content .case-study-expansion .analytics-evidence-status.analytics-status-passed{
+  background:#ecfdf3;
+  border-color:#bbf7d0;
+  color:#166534;
+}
+
+@media(max-width:650px){
+  .case-content .case-study-expansion .planned-phase h3 small.roadmap-status-badge{
+    margin:.42rem 0 0;
+  }
+}
