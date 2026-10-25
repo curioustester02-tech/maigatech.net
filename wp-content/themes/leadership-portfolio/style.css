@@ -2371,3 +2371,195 @@ body.postid-57 .case-side .network-tech-items {
     margin:.42rem 0 0;
   }
 }
+
+
+/* =========================================================
+   MaigaTech Smart Farming & Edge Computing — local preview v1
+   Public-safe Raspberry Pi 5 engineering case study
+   ========================================================= */
+
+.case-content .smart-farming-edge-case h2[id]{
+  scroll-margin-top:96px;
+}
+
+.case-content .smart-farming-edge-case .edge-feature{
+  margin:0 0 1.75rem;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#f4f8fc;
+}
+
+.case-content .smart-farming-edge-case .edge-feature img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.case-content .smart-farming-edge-case .edge-feature figcaption{
+  padding:.75rem 1rem;
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.55;
+}
+
+.case-content .smart-farming-edge-case .edge-scenario,
+.case-content .smart-farming-edge-case .edge-disclosure{
+  margin:1rem 0 1.6rem;
+  padding:1.1rem 1.2rem;
+  border:1px solid #bad6eb;
+  border-left:4px solid var(--blue);
+  border-radius:12px;
+  background:#f2f8ff;
+}
+
+.case-content .smart-farming-edge-case .edge-disclosure{
+  margin-top:2rem;
+  background:var(--soft);
+}
+
+.case-content .smart-farming-edge-case .edge-note{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+.case-content .smart-farming-edge-case .edge-flow{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:.7rem;
+  margin:1.1rem 0 1.5rem;
+}
+
+.case-content .smart-farming-edge-case .edge-flow > div{
+  padding:1rem .85rem;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--soft);
+  text-align:center;
+}
+
+.case-content .smart-farming-edge-case .edge-flow strong,
+.case-content .smart-farming-edge-case .edge-panel strong{
+  display:block;
+  color:var(--navy);
+}
+
+.case-content .smart-farming-edge-case .edge-flow span{
+  display:block;
+  margin-top:.35rem;
+  color:var(--muted);
+  font-size:.8rem;
+  line-height:1.45;
+}
+
+.case-content .smart-farming-edge-case .edge-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.85rem;
+  margin:1.1rem 0 1.8rem;
+}
+
+.case-content .smart-farming-edge-case .edge-panel{
+  padding:1.05rem;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+}
+
+.case-content .smart-farming-edge-case .edge-panel p{
+  margin:.5rem 0 0;
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.6;
+}
+
+.case-content .smart-farming-edge-case .edge-tag{
+  display:inline-flex;
+  align-items:center;
+  margin:0 0 .55rem;
+  padding:.22rem .52rem;
+  border:1px solid;
+  border-radius:999px;
+  font-size:.7rem;
+  font-weight:800;
+  line-height:1.2;
+  text-transform:uppercase;
+  letter-spacing:.035em;
+}
+
+.case-content .smart-farming-edge-case .edge-done{
+  background:#ecfdf3;
+  border-color:#bbf7d0;
+  color:#166534;
+}
+
+.case-content .smart-farming-edge-case .edge-live{
+  background:#fff7ed;
+  border-color:#fed7aa;
+  color:#9a3412;
+}
+
+.case-content .smart-farming-edge-case .edge-plan{
+  background:#f3f4f6;
+  border-color:#d1d5db;
+  color:#4b5563;
+}
+
+.case-content .smart-farming-edge-case .edge-table-wrap{
+  width:100%;
+  overflow-x:auto;
+  margin:1rem 0 1.7rem;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:#fff;
+}
+
+.case-content .smart-farming-edge-case .edge-table{
+  width:100%;
+  min-width:760px;
+  border-collapse:collapse;
+  margin:0;
+  font-size:.9rem;
+}
+
+.case-content .smart-farming-edge-case .edge-table th,
+.case-content .smart-farming-edge-case .edge-table td{
+  padding:.75rem .8rem;
+  text-align:left;
+  vertical-align:top;
+  border-bottom:1px solid var(--line);
+}
+
+.case-content .smart-farming-edge-case .edge-table th{
+  background:var(--soft);
+  color:var(--navy);
+  font-weight:800;
+}
+
+.case-content .smart-farming-edge-case .edge-table tbody tr:last-child td{
+  border-bottom:0;
+}
+
+.case-content .smart-farming-edge-case .edge-table .edge-tag{
+  margin:0;
+  white-space:nowrap;
+}
+
+.case-content .smart-farming-edge-case .edge-local-nav{
+  margin-bottom:2rem;
+}
+
+@media(max-width:800px){
+  .case-content .smart-farming-edge-case .edge-flow,
+  .case-content .smart-farming-edge-case .edge-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:560px){
+  .case-content .smart-farming-edge-case .edge-flow,
+  .case-content .smart-farming-edge-case .edge-grid{
+    grid-template-columns:1fr;
+  }
+}
+
