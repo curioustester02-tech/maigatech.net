@@ -2563,3 +2563,101 @@ body.postid-57 .case-side .network-tech-items {
   }
 }
 
+/* MaigaTech About Page v1 START */
+.maigatech-about .about-hero{background:linear-gradient(132deg,#fff 10%,#eaf3fd 100%);border-bottom:1px solid var(--line);padding:64px 0 68px}
+.maigatech-about .about-hero-grid{display:grid;grid-template-columns:1.5fr .65fr;align-items:center;gap:64px}
+.maigatech-about .about-tagline{font-size:clamp(1.2rem,2vw,1.48rem);font-weight:700;color:#294566;margin:0 0 22px}
+.maigatech-about .about-hero-intro{font-size:1.07rem;max-width:760px;color:#344c67}
+.maigatech-about .about-hero-intro p{margin:0 0 16px}
+.maigatech-about .about-hero-intro strong{color:#102a4c}
+.maigatech-about .about-portrait-wrap{justify-self:end}
+.maigatech-about .about-portrait{display:block;width:100%;max-width:315px;aspect-ratio:4/5;object-fit:cover;object-position:center 24%;border-radius:26px;box-shadow:0 22px 50px rgba(5,30,60,.16);border:6px solid #fff}
+.maigatech-about .about-intro-copy{max-width:870px;font-size:1.045rem;margin-top:22px}
+.maigatech-about .about-intro-copy p{margin:0 0 18px}
+.maigatech-about .about-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:32px}
+.maigatech-about .about-metric{background:#fff;border:1px solid var(--line);box-shadow:0 8px 30px rgba(9,31,60,.06);border-radius:16px;padding:22px}
+.maigatech-about .about-metric strong{display:block;font-size:1.9rem;color:var(--navy);letter-spacing:-.035em}
+.maigatech-about .about-metric span{font-size:.88rem;color:var(--muted)}
+.maigatech-about .about-section-lead{color:var(--muted);max-width:870px;margin:14px 0 24px}
+.maigatech-about .about-grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.maigatech-about .about-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:var(--shadow)}
+.maigatech-about .about-card p{margin:10px 0 0;color:#52657c}
+.maigatech-about .about-ordinal{display:inline-block;font-weight:800;font-size:.77rem;letter-spacing:.09em;color:var(--blue);margin-bottom:12px}
+.maigatech-about .about-columns{display:grid;grid-template-columns:1fr 1fr;gap:62px;align-items:start}
+.maigatech-about .about-columns p{margin:16px 0 17px}
+.maigatech-about .about-contact-band{background:linear-gradient(130deg,#071a33,#0b3b72);color:#fff;margin-bottom:-55px}
+.maigatech-about .about-contact-band h2,.maigatech-about .about-contact-band p{color:#fff}
+.maigatech-about .about-contact-band p{max-width:800px;color:#d4e3f0}
+.maigatech-about .about-light-outline{background:transparent;color:#fff;border-color:#9db5cd}
+.maigatech-about .about-light-outline:hover{border-color:#fff}
+@media(max-width:850px){.maigatech-about .about-hero-grid{grid-template-columns:1fr;gap:28px}.maigatech-about .about-portrait-wrap{justify-self:start}.maigatech-about .about-portrait{max-width:250px}.maigatech-about .about-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.maigatech-about .about-grid3{grid-template-columns:1fr}.maigatech-about .about-columns{grid-template-columns:1fr;gap:34px}}
+@media(max-width:650px){.maigatech-about .about-hero{padding:40px 0 48px}.maigatech-about .about-metrics{grid-template-columns:1fr}.maigatech-about .about-metric strong{font-size:1.5rem}.maigatech-about .about-portrait{max-width:220px}.maigatech-about .about-contact-band{margin-bottom:-55px}}
+/* MaigaTech About Page v1 END */
+
+/* MaigaTech About Blue Hero v1.3 START */
+.maigatech-about .about-hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 78% 44%,rgba(74,143,219,.20) 0,rgba(74,143,219,.08) 16%,transparent 34%),
+    linear-gradient(135deg,#06162c 0%,#0a2447 58%,#0b3970 100%);
+  color:#fff;
+  border-bottom:0;
+  padding:72px 0 76px;
+}
+.maigatech-about .about-hero:after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  right:9%;
+  top:50%;
+  transform:translateY(-50%);
+  border-radius:50%;
+  border:1px solid rgba(89,163,255,.10);
+  box-shadow:
+    0 0 0 70px rgba(89,163,255,.035),
+    0 0 0 140px rgba(89,163,255,.025);
+  pointer-events:none;
+}
+.maigatech-about .about-hero-grid{
+  position:relative;
+  z-index:1;
+}
+.maigatech-about .about-hero .eyebrow{
+  color:#59a3ff;
+}
+.maigatech-about .about-hero h1{
+  margin:0 0 12px;
+  color:#fff;
+  font-size:clamp(3rem,5vw,4.5rem);
+  line-height:1.04;
+  letter-spacing:-.04em;
+}
+.maigatech-about .about-tagline{
+  color:#d8e6f4;
+}
+.maigatech-about .about-hero-intro{
+  color:#d4e0ed;
+}
+.maigatech-about .about-hero-intro strong{
+  color:#fff;
+}
+.maigatech-about .about-hero .btn.ink{
+  background:transparent;
+  color:#fff;
+  border-color:#7690ad;
+}
+.maigatech-about .about-hero .btn.ink:hover{
+  border-color:#fff;
+  background:rgba(255,255,255,.06);
+}
+.maigatech-about .about-portrait{
+  border:1px solid rgba(255,255,255,.30);
+  box-shadow:0 26px 70px rgba(0,0,0,.32);
+}
+@media(max-width:650px){
+  .maigatech-about .about-hero{padding:48px 0 52px}
+  .maigatech-about .about-hero:after{width:280px;height:280px;right:-80px;opacity:.7}
+}
+/* MaigaTech About Blue Hero v1.3 END */
